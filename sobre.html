@@ -2,53 +2,114 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sobre o caso</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre o caso - Uber em crise</title>
   <link rel="stylesheet" href="estilo.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #006b66;
+      color: #f0f0f0;
+      margin: 0;
+      padding: 30px;
+      line-height: 1.6;
+    }
+
+    h1 {
+      text-align: left;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 1.2em;
+      margin-top: 25px;
+      color: #a3e4d7;
+    }
+
+    p {
+      margin-bottom: 12px;
+      text-align: justify;
+    }
+
+    .referencias {
+      margin-top: 40px;
+    }
+
+    .referencias h2 {
+      color: #ffd966;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    a {
+      color: #ffd966;
+      text-decoration: none;
+    }
+
+    .botao-voltar {
+      margin-top: 40px;
+      display: inline-block;
+      background-color: #004d4d;
+      padding: 12px 20px;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-  <div class="painel">
-    <h1>📂 Sobre o caso</h1>
-    <p>
-      O jogo é inspirado em um caso real enfrentado pela Uber Technologies Inc., entre 2016 e 2018, envolvendo um dos maiores vazamentos de dados já registrados. 
-    </p>
+  <h1>Uber em crise: Segurança da informação, ética e governança (2016–2017)</h1>
 
-    <p>
-      Em outubro de 2016, hackers obtiveram acesso a credenciais da infraestrutura da empresa hospedada na Amazon Web Services (AWS), por meio de códigos-fonte deixados publicamente disponíveis no GitHub por desenvolvedores da empresa.
-    </p>
+  <p><strong>Introdução – O fenômeno Uber</strong><br>
+  Em meados de 2016, a Uber não era apenas uma empresa, era um fenômeno mundial. Nascida em 2009, em São Francisco, Califórnia, cresceu vertiginosamente ao oferecer uma proposta disruptiva no setor de transporte urbano: conectar passageiros e motoristas particulares por meio de um aplicativo simples e eficiente. A rapidez no atendimento, facilidade de pagamento, preços competitivos e comodidade fizeram da Uber um exemplo máximo da chamada "economia compartilhada".</p>
 
-    <p>
-      Com essas credenciais, os invasores conseguiram acessar dados de mais de 57 milhões de usuários e motoristas. Os dados incluíam nomes, e-mails, números de telefone e informações de carteira de motorista.
-    </p>
+  <p>Até 2016, a empresa estava presente em centenas de cidades ao redor do globo, avaliada em mais de 60 bilhões de dólares, um ícone da inovação tecnológica que provocou uma transformação profunda no transporte tradicional e na mobilidade urbana. Contudo, tal crescimento acelerado trazia também desafios gigantescos relacionados à governança, ética, privacidade e segurança da informação – problemas que logo se tornariam uma crise sem precedentes.</p>
 
-    <p>
-      Ao invés de seguir os protocolos legais e notificar os órgãos competentes, a Uber optou por ocultar o incidente. A empresa pagou 100 mil dólares aos hackers como parte de um suposto "bug bounty" e exigiu que eles assinassem acordos de confidencialidade. A decisão violou legislações de proteção de dados e gerou repercussões globais.
-    </p>
+  <h2>Outubro de 2016 – O ataque silencioso</h2>
+  <p>No mês de outubro de 2016, hackers conseguiram invadir sistemas cruciais da infraestrutura tecnológica da Uber. A vulnerabilidade estava em credenciais de acesso ao ambiente da Amazon Web Services (AWS), armazenadas descuidadamente num repositório privado do GitHub, utilizado pelos desenvolvedores da empresa.</p>
+  <p>Sem um controle rigoroso e auditorias regulares, tais credenciais permitiram que invasores obtivessem acesso fácil aos servidores e, consequentemente, aos dados pessoais de aproximadamente 57 milhões de usuários, entre passageiros e motoristas da plataforma (ISAAC, 2017).</p>
+  <p>A invasão não era trivial: nomes completos, e-mails, números de telefone e cerca de 600 mil números de carteiras de habilitação de motoristas americanos ficaram expostos. Era o tipo de incidente grave e urgente que deveria ser reportado imediatamente às autoridades e às vítimas, conforme estabelecem padrões éticos e legais. Mas não foi isso que aconteceu.</p>
 
-    <p>
-      O caso só veio a público em novembro de 2017, quando o novo CEO da empresa, Dara Khosrowshahi, revelou o ocorrido. A empresa foi amplamente criticada, recebeu multas milionárias e teve sua reputação severamente abalada.
-    </p>
+  <h2>Novembro de 2016 – O pagamento secreto</h2>
+  <p>Ao invés de adotar uma postura transparente, a Uber, liderada na época por Travis Kalanick, tomou uma decisão que viria a agravar significativamente o caso. A empresa, ciente da gravidade do vazamento e temendo repercussões negativas, preferiu pagar cerca de US$ 100 mil aos hackers para que apagassem as informações roubadas, assinando contratos que exigiam silêncio total. O pagamento foi disfarçado dentro do programa de recompensas por vulnerabilidades da Uber (Bug Bounty) (ISAAC, 2017).</p>
 
-    <p>
-      O jogo propõe aos estudantes vivenciar esse cenário de forma preventiva, simulando a construção de um Projeto de Segurança da Informação (PSI) eficaz antes da crise acontecer.
-    </p>
+  <h2>Fevereiro de 2017 – Susan Fowler expõe a cultura tóxica</h2>
+  <p>Enquanto o vazamento ainda era desconhecido pelo grande público, outro escândalo veio à tona. Susan J. Fowler, engenheira de software que trabalhou na Uber durante cerca de um ano, publicou em fevereiro de 2017 um relato impactante e detalhado em seu blog pessoal sobre episódios sistemáticos de assédio sexual, discriminação e uma cultura corporativa tóxica e antiética (FOWLER, 2017).</p>
+  <p>O texto viralizou rapidamente. Fowler narrava casos explícitos de abusos e negligências por parte da gestão e do departamento de Recursos Humanos. O relato detonou uma crise institucional e ética profunda, obrigando a Uber a realizar uma investigação independente conduzida pelo ex-Procurador Geral dos Estados Unidos, Eric Holder.</p>
 
-    <h2>📚 Referências</h2>
+  <h2>Junho de 2017 – A queda de Travis Kalanick</h2>
+  <p>Em meio às turbulências crescentes e às conclusões iniciais da investigação sobre a cultura interna da empresa, em junho de 2017 Travis Kalanick, fundador e CEO da Uber, acabou renunciando à sua posição (CNN BUSINESS, 2017). Sua saída simbolizava o ápice de uma crise profunda que envolvia não apenas questões técnicas, mas de liderança, ética e governança.</p>
+
+  <h2>Agosto de 2017 – Dara Khosrowshahi e o compromisso com a transparência</h2>
+  <p>Para tentar restaurar a confiança e reerguer a imagem pública profundamente abalada, Dara Khosrowshahi foi escolhido como novo CEO da Uber em agosto de 2017 (REUTERS, 2017). Ao assumir, declarou publicamente o compromisso com maior ética, transparência e responsabilidade corporativa.</p>
+  <p>Ainda naquele mês, a Uber assinou um acordo com a Comissão Federal de Comércio dos Estados Unidos (FTC) para resolver problemas anteriores de segurança e privacidade, incluindo o uso indevido da ferramenta “God View”, que permitia monitorar a localização de usuários em tempo real (FTC, 2017).</p>
+
+  <h2>Novembro de 2017 – A revelação pública do ataque</h2>
+  <p>Em novembro de 2017, já sob nova gestão, uma auditoria interna finalmente revelou ao público e às autoridades o vazamento de dados ocorrido em outubro do ano anterior. A revelação tardia chocou usuários, imprensa e reguladores, gerando uma nova onda de críticas, investigações internacionais e processos legais (ISAAC, 2017).</p>
+
+  <h2>Setembro de 2018 – A condenação e multa milionária</h2>
+  <p>Após meses de investigações e negociações, em setembro de 2018, a Uber fechou um acordo histórico com autoridades dos 50 estados americanos e com a capital Washington, D.C. A empresa concordou em pagar uma multa de US$ 148 milhões por ter ocultado o incidente e por não ter adotado medidas adequadas de segurança e governança (WASHINGTON POST, 2018).</p>
+
+  <h2>Impacto e aprendizado</h2>
+  <p>As consequências dessa crise foram amplas e profundas. Além da multa financeira milionária, a Uber sofreu impactos gravíssimos à sua imagem pública e precisou reformular significativamente sua estrutura interna, implementar políticas de segurança robustas e treinar funcionários de todos os níveis sobre governança, ética e proteção de dados.</p>
+  <p>O caso Uber tornou-se referência em cursos, seminários e congressos sobre segurança da informação e governança corporativa em todo o mundo. Evidenciou como práticas inadequadas em segurança da informação e governança não apenas geram prejuízos financeiros e judiciais, mas podem ameaçar o próprio futuro de organizações poderosas e inovadoras.</p>
+
+  <div class="referencias">
+    <h2>Referências</h2>
     <ul>
-      <li>
-        Federal Trade Commission. (2018). <em>Uber Settles FTC Allegations That It Made Deceptive Privacy and Data Security Claims</em>. Acesso em: https://www.ftc.gov
-      </li>
-      <li>
-        Kerr, D. (2017). <em>Uber paid hackers $100,000 to keep data breach secret</em>. CNET. Acesso em: https://www.cnet.com
-      </li>
-      <li>
-        Zetter, K. (2017). <em>Uber's massive data breach reveals the dangers of secret bug bounties</em>. Wired. Acesso em: https://www.wired.com
-      </li>
+      <li>FOWLER, Susan J. Reflecting on one very, very strange year at Uber. Blog pessoal, 2017.</li>
+      <li>ISAAC, Mike. Uber Hid 2016 Breach, Paying Hackers to Delete Stolen Data. The New York Times, 21 nov. 2017.</li>
+      <li>FEDERAL TRADE COMMISSION. Uber settles FTC allegations. FTC Press Release, 15 ago. 2017.</li>
+      <li>CNN BUSINESS. Uber CEO Travis Kalanick resigns. CNN, 21 jun. 2017.</li>
+      <li>REUTERS. Uber picks Dara Khosrowshahi as CEO. Reuters, 27 ago. 2017.</li>
+      <li>WASHINGTON POST. Uber to settle breach claims for $148 million. 26 set. 2018.</li>
     </ul>
-
-    <div style="margin-top: 20px;">
-      <a href="index.html" class="botao">← Voltar ao início</a>
-    </div>
   </div>
+
+  <a href="index.html" class="botao-voltar">← Voltar ao início</a>
 </body>
 </html>
