@@ -1,16 +1,77 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Jogar - Uber em Crise</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início da Missão</title>
     <link rel="stylesheet" href="estilo.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .painel-jogo {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 40px;
+            max-width: 900px;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.7);
+        }
+
+        h2 {
+            color: #00ffc8;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .botao-avancar {
+            margin-top: 20px;
+            padding: 12px 24px;
+            font-size: 18px;
+            border: none;
+            border-radius: 12px;
+            background-color: #00ffc8;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .botao-avancar:hover {
+            background-color: #00b89c;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Missão inicial</h1>
-        <p>Você foi contratado como consultor de segurança da informação para a Uber...</p>
-        <a href="index.html" class="botao">Voltar ao Início</a>
+    <div class="painel-jogo">
+        <h2>🕵️ Início da Missão</h2>
+
+        <p><strong>Ano: 2016.</strong> A Uber é uma das startups mais valiosas do mundo, símbolo da economia digital e da inovação em mobilidade urbana.</p>
+
+        <p>Com presença em centenas de cidades, a empresa conecta milhões de usuários e motoristas. Sua infraestrutura armazena dados sensíveis: nomes, endereços, histórico de viagens, localização em tempo real, dados bancários e documentos de identidade.</p>
+
+        <p>Apesar do crescimento acelerado, a Uber enfrenta críticas internas por priorizar velocidade e expansão em detrimento de processos de segurança e governança. A cultura do “fazer primeiro, corrigir depois” começa a mostrar sinais de risco.</p>
+
+        <p>Você e sua equipe foram contratados como consultores estratégicos em Segurança da Informação. A missão: <strong>desenvolver um Projeto de Segurança da Informação (PSI)</strong> que previna vulnerabilidades técnicas, organizacionais e éticas que possam comprometer a empresa.</p>
+
+        <p>A diretoria autorizou a implementação de até <strong>5 medidas iniciais</strong>. Sua equipe deve escolher com sabedoria, pois cada decisão pode evitar — ou permitir — que uma crise se instale.</p>
+
+        <p>Ao longo das próximas rodadas, você verá as consequências dessas escolhas. O futuro da Uber — sua reputação, seus usuários e sua existência — depende do seu plano.</p>
+
+        <button class="botao-avancar" onclick="window.location.href='escolher-defesas.html'">🔐 Escolher Defesas</button>
     </div>
 </body>
 </html>
