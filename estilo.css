@@ -1,0 +1,25 @@
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #00897b, #004d40);
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.container {
+    padding: 50px 20px;
+}
+.botao {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 30px;
+    background-color: #26a69a;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.botao:hover {
+    background-color: #00796b;
+}
