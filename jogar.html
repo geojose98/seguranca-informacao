@@ -15,17 +15,18 @@
       font-family: 'Arial', sans-serif;
       background: url('jogo-pag1.png') no-repeat center center;
       background-size: contain;
-      background-color: #222222; /* Cor que harmoniza com o fundo da imagem */
+      background-color: #222222;
       height: 100vh;
       width: 100vw;
-      overflow: auto;
-      display: flex;
-      justify-content: flex-end;
-      align-items: flex-end;
+      overflow: hidden;
+      position: relative;
     }
 
     .botao-proximo {
-      margin: 40px;
+      position: absolute;
+      top: 50%;
+      right: 30px;
+      transform: translateY(-50%);
       padding: 15px 30px;
       background-color: #ffcc00;
       color: #000;
@@ -45,11 +46,13 @@
       body {
         background: url('jogo-pag1-cell.png') no-repeat center center;
         background-size: cover;
-        background-color: #000;
       }
 
       .botao-proximo {
-        margin: 20px;
+        position: static;
+        margin: 20px auto;
+        display: block;
+        transform: none;
         width: calc(100% - 40px);
       }
     }
