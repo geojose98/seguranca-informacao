@@ -1,79 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Início da Missão</title>
-    <link rel="stylesheet" href="estilo.css">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-            color: #f1f1f1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uber em Crise - Início</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        .painel-jogo {
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 40px;
-            max-width: 900px;
-            border-radius: 20px;
-            box-shadow: 0 0 30px rgba(0,0,0,0.7);
-            text-align: left;
-        }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: url('jogo-pag1.png') no-repeat center center;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
 
-        h2 {
-            color: #00ffc8;
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
+    .botao-proximo {
+      margin: 40px;
+      padding: 15px 30px;
+      background-color: #ffcc00;
+      color: #000;
+      font-weight: bold;
+      font-size: 18px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
 
-        p {
-            font-size: 18px;
-            line-height: 1.7;
-            margin-bottom: 20px;
-        }
+    .botao-proximo:hover {
+      background-color: #e6b800;
+    }
 
-        .botao-avancar {
-            margin-top: 20px;
-            padding: 12px 24px;
-            font-size: 18px;
-            border: none;
-            border-radius: 12px;
-            background-color: #00ffc8;
-            color: #000;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+    @media (max-width: 600px) {
+      body {
+        background: url('jogo-pag1-cell.png') no-repeat center center;
+        background-size: cover;
+      }
 
-        .botao-avancar:hover {
-            background-color: #00b89c;
-        }
-    </style>
+      .botao-proximo {
+        margin: 20px;
+        width: calc(100% - 40px);
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="painel-jogo">
-        <h2>🕵️ Início da Missão</h2>
-
-<p><strong>Você acabou de assumir um cargo estratégico em uma das empresas mais desejadas do mundo: a Uber.</p>
-
-<p>Criada em 2009, a startup se transformou em um fenômeno global em apenas sete anos. Em 2016, ela está presente em mais de 500 cidades, movimentando bilhões de dólares em corridas mensais e já é avaliada em mais de 60 bilhões de dólares.</p>
-
-<p>Mais de 40 milhões de pessoas usam o aplicativo todos os meses. Passageiros, motoristas, localizações, cartões de crédito, documentos de identificação... Tudo isso está sendo gerado, armazenado e processado pela empresa em tempo real.</p>
-
-<p>Mas por trás do crescimento meteórico, você começa a perceber sinais preocupantes:</p>
-
-<p>-Decisões tomadas às pressas.</p>
-<p>-Falta de processos estruturados.</p>
-<p>-Equipes de tecnologia trabalhando no limite, sem padronização.</p>
-<p>-Ausência de uma política formal de segurança da informação.</p>
-
-        <button class="botao-avancar" onclick="window.location.href='escolher-defesas.html'">🔐 Escolher Defesas</button>
-    </div>
+  <button class="botao-proximo" onclick="window.location.href='pagina2.html'">➡️ Avançar</button>
 </body>
 </html>
