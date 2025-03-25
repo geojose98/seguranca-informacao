@@ -20,13 +20,13 @@
       width: 100vw;
       overflow: hidden;
       position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
     }
 
     .botao-proximo {
-      position: absolute;
-      top: 50%;
-      right: 30px;
-      transform: translateY(-50%);
+      margin-bottom: 30px;
       padding: 15px 30px;
       background-color: #ffcc00;
       color: #000;
@@ -42,15 +42,10 @@
       background-color: #e6b800;
     }
 
-    /* CELULAR */
     @media (max-width: 600px) {
-      .botao-proximo {
-        position: fixed;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: calc(100% - 40px);
-        max-width: 300px;
+      body {
+        background: url('jogo-pag1-cell.png') no-repeat center center;
+        background-size: cover;
       }
     }
   </style>
