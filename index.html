@@ -16,7 +16,7 @@
       background: url('Home.png') no-repeat center center;
       background-size: cover;
       height: 100vh;
-      overflow: auto;
+      overflow: hidden;
       display: flex;
       justify-content: center;
       align-items: flex-end;
@@ -49,16 +49,31 @@
       background-color: #00acc1;
     }
 
+    /* 👇 Estilo para CELULAR */
     @media (max-width: 600px) {
+      body {
+        background-image: url('homecell.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top center;
+        height: 100vh;
+        overflow-y: auto;
+        padding-top: 70vh;
+        padding-bottom: 5vh;
+        align-items: flex-start;
+      }
+
       .botoes-container {
         flex-direction: column;
-        gap: 10px;
+        gap: 12px;
         padding: 20px;
+        width: 100%;
       }
 
       .botao {
-        width: 100%;
+        width: 90%;
         text-align: center;
+        margin: 0 auto;
       }
     }
   </style>
