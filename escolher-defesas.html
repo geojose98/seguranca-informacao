@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escolha suas Defesas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1a1a1a;
+      color: #fff;
+      margin: 0;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3em;
+      color: #ffe600;
+      margin-bottom: 30px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto 40px auto;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      cursor: pointer;
+      transition: transform 0.2s, border 0.3s;
+      border: 4px solid transparent;
+    }
+
+    .card img {
+      width: 100%;
+      display: block;
+    }
+
+    .card h3 {
+      font-size: 1.1em;
+      margin: 10px;
+      color: #004c6d;
+    }
+
+    .card p {
+      font-size: 0.9em;
+      margin: 0 10px 10px 10px;
+      color: #333;
+    }
+
+    .card.selected {
+      border-color: #00ccff;
+    }
+
+    .botao-confirmar {
+      display: block;
+      margin: 0 auto;
+      padding: 15px 30px;
+      background-color: #ffe600;
+      color: #000;
+      font-weight: bold;
+      font-size: 18px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .botao-confirmar:disabled {
+      background-color: #999;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <h1>Pensei bem... e escolha.</h1>
+  <div class="container" id="cards-container"></div>
+  <button id="confirmar" class="botao-confirmar" disabled onclick="confirmarEscolhas()">👉 Rodada 1</button>
+
+  <script>
+    const defesas = [
+      { id: 1, titulo: "Pagamento sigiloso a hackers", desc: "Negociação direta com invasores para exclusão dos dados obtidos e manutenção da reputação da empresa.", imagem: "defesa1.png" },
+      { id: 2, titulo: "Treinamento em cultura de segurança", desc: "Capacitação de equipes para adoção de comportamentos éticos e seguros no manuseio de dados e sistemas.", imagem: "defesa2.png" },
+      { id: 3, titulo: "Lounge premium para funcionários", desc: "Espaço de bem-estar para colaboradores de alto desempenho, promovendo conforto e valorização interna.", imagem: "defesa3.png" },
+      { id: 4, titulo: "Firewall e monitoramento contínuo", desc: "Sistema de defesa com vigilância constante para prevenir invasões e detectar comportamentos suspeitos em tempo real.", imagem: "defesa4.png" },
+      { id: 5, titulo: "Ocultação do vazamento de dados", desc: "Decisão de manter o incidente em sigilo, evitando exposição pública e repercussão negativa na mídia.", imagem: "defesa5.png" },
+      { id: 6, titulo: "Backup criptografado", desc: "Cópias de segurança protegidas por criptografia para garantir a integridade e o sigilo das informações, mesmo em caso de ataque.", imagem: "defesa6.png" },
+      { id: 7, titulo: "Contratação de influenciadores digitais", desc: "Parcerias com personalidades para divulgar os serviços e melhorar a imagem pública da empresa.", imagem: "defesa7.png" },
+      { id: 8, titulo: "Acordos de confidencialidade (NDAs)", desc: "Instrumento legal assinado por colaboradores e parceiros para reforçar o compromisso com o sigilo das informações internas.", imagem: "defesa8.png" },
+      { id: 9, titulo: "Plano de resposta a incidentes", desc: "Procedimento estruturado para lidar com crises de segurança, definindo papéis, prazos e formas de comunicação.", imagem: "defesa9.png" },
+      { id: 10, titulo: "Registro de propriedade intelectual", desc: "Formalização de criações, métodos e inovações para proteger ativos imateriais da empresa.", imagem: "defesa10.png" },
+      { id: 11, titulo: "Plano de expansão internacional", desc: "Estratégia para entrar em novos mercados com velocidade, consolidando a presença global da empresa.", imagem: "defesa11.png" },
+      { id: 12, titulo: "Política de retenção de conhecimento", desc: "Diretriz para documentar e preservar o conhecimento estratégico da empresa, evitando perdas em caso de saída de profissionais.", imagem: "defesa12.png" },
+      { id: 13, titulo: "Silenciamento de denúncias internas", desc: "Abordagem de não expor problemas organizacionais e culturais para preservar a imagem corporativa.", imagem: "defesa13.png" },
+      { id: 14, titulo: "Campanha de marketing global", desc: "Ação publicitária para ampliar o reconhecimento e a reputação da marca em diversos países.", imagem: "defesa14.png" },
+      { id: 15, titulo: "Uniformes personalizados", desc: "Peças exclusivas que reforçam a identidade visual da equipe e fortalecem a marca junto aos usuários.", imagem: "defesa15.png" }
+    ];
+
+    const container = document.getElementById('cards-container');
+    const confirmarBtn = document.getElementById('confirmar');
+    let selecionadas = [];
+
+    defesas.forEach(defesa => {
+      const card = document.createElement('div');
+      card.classList.add('card');
+      card.setAttribute('data-id', defesa.id);
+      card.innerHTML = `
+        <img src="${defesa.imagem}" alt="${defesa.titulo}" />
+        <h3>${defesa.titulo}</h3>
+        <p>${defesa.desc}</p>
+      `;
+      card.onclick = () => toggleSelecionado(card, defesa.id);
+      container.appendChild(card);
+    });
+
+    function toggleSelecionado(card, id) {
+      if (selecionadas.includes(id)) {
+        selecionadas = selecionadas.filter(item => item !== id);
+        card.classList.remove('selected');
+      } else {
+        if (selecionadas.length >= 5) return;
+        selecionadas.push(id);
+        card.classList.add('selected');
+      }
+      confirmarBtn.disabled = selecionadas.length !== 5;
+    }
+
+    function confirmarEscolhas() {
+      localStorage.setItem('defesasEscolhidas', JSON.stringify(selecionadas));
+      window.location.href = 'rodada1.html';
+    }
+  </script>
+</body>
+</html>
