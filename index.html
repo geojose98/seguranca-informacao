@@ -14,27 +14,28 @@
     body {
       font-family: 'Segoe UI', sans-serif;
       background: url('Home.png') no-repeat center center;
-      background-size: contain;
+      background-size: cover;
       height: 100vh;
-      overflow: hidden; /* impede rolagem */
+      overflow: hidden;
       display: flex;
       justify-content: center;
       align-items: flex-end;
+      padding-bottom: 4vh;
     }
 
     .botoes-container {
       display: flex;
       gap: 20px;
-      margin-bottom: 30px;
       flex-wrap: wrap;
       justify-content: center;
-      background-color: rgba(255, 255, 255, 0.05);
+      background-color: rgba(255, 255, 255, 0.07);
       padding: 12px 24px;
       border-radius: 20px;
+      backdrop-filter: blur(5px);
     }
 
     .botao {
-      background-color: #4dd0e1;
+      background-color: #3bd5e4;
       color: #003c52;
       font-weight: bold;
       padding: 12px 24px;
@@ -42,7 +43,7 @@
       text-decoration: none;
       font-size: 18px;
       transition: background-color 0.3s ease;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     }
 
     .botao:hover {
@@ -53,6 +54,7 @@
       .botoes-container {
         flex-direction: column;
         gap: 10px;
+        padding: 20px;
       }
 
       .botao {
