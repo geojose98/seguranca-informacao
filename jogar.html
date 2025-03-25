@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Uber em Crise - Início</title>
+  <title>Uber em Crise - Etapa 1</title>
   <style>
     * {
       margin: 0;
@@ -14,8 +14,11 @@
     body {
       font-family: 'Segoe UI', sans-serif;
       background: url('jogo-pag1.png') no-repeat center center;
-      background-size: cover;
+      background-size: contain;
+      background-color: #111111; /* Cor que harmoniza com o fundo da imagem */
       height: 100vh;
+      width: 100vw;
+      overflow: hidden;
       display: flex;
       justify-content: flex-end;
       align-items: flex-end;
@@ -42,6 +45,7 @@
       body {
         background: url('jogo-pag1-cell.png') no-repeat center center;
         background-size: cover;
+        background-color: #000;
       }
 
       .botao-proximo {
@@ -52,6 +56,6 @@
   </style>
 </head>
 <body>
-  <button class="botao-proximo" onclick="window.location.href='pagina2.html'">➡️ Avançar</button>
+  <button class="botao-proximo" onclick="window.location.href='jogo-pag2.html'">➡️ Avançar</button>
 </body>
 </html>
