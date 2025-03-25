@@ -1,42 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cadastro de Grupo</title>
+  <meta charset="UTF-8">
+  <title>Cadastro do Grupo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: white;
+      font-family: 'Segoe UI', sans-serif;
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
-      min-height: 100vh;
-      padding: 20px;
+      align-items: center;
+      height: 100vh;
+      color: white;
     }
 
-    h1 {
-      margin-bottom: 20px;
-      font-size: 28px;
-      text-align: center;
+    .container-form {
+      width: 90%;
+      max-width: 800px;
+      height: 90vh;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      padding: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
     }
 
     iframe {
-      border: none;
       width: 100%;
-      max-width: 600px;
-      height: 700px;
-      border-radius: 16px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.4);
-      background-color: white;
+      height: 100%;
+      border: none;
     }
   </style>
 </head>
 <body>
-  <h1>📋 Cadastre o nome do grupo para iniciar o jogo</h1>
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeTxqa2rgn7cG_QSRHtq_fvZzAQsG2_1tO7m4A_pwwl5whOQg/viewform?embedded=true" allowfullscreen></iframe>
+  <div class="container-form">
+    <iframe src="https://docs.google.com/forms/d/e/18X-MnqwwJHZhaC-NEAWmtN-2-ZY0Dtj5igtIwhtg_AQ/viewform?embedded=true" loading="lazy">
+      Carregando…
+    </iframe>
+  </div>
 </body>
 </html>
