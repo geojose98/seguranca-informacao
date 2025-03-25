@@ -1,20 +1,61 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <title>Uber em Crise - Início</title>
     <link rel="stylesheet" href="estilo.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-image: url('Home.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center top;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            min-height: 100vh;
+        }
+
+        .container {
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        nav {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .botao {
+            background-color: #00ffc8;
+            color: #000;
+            font-weight: bold;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .botao:hover {
+            background-color: #00b89c;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1>Uber em crise:</h1>
-        <h2>Você protegeria a empresa?</h2>
         <nav>
-            <a href="jogar.html" class="botao">Jogar</a>
-            <a href="desenvolvimento.html" class="botao">Desenvolvimento</a>
-            <a href="sobre.html" class="botao">Sobre</a>
-            <a href="materiais.html" class="botao">Materiais</a>
+            <a href="jogar.html" class="botao">🕹️ Jogar</a>
+            <a href="desenvolvimento.html" class="botao">📘 Desenvolvimento</a>
+            <a href="sobre.html" class="botao">📂 Sobre</a>
+            <a href="materiais.html" class="botao">📎 Materiais</a>
         </nav>
     </div>
 </body>
