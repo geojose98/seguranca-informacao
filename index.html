@@ -1,35 +1,24 @@
-<body>
-  <div class="container">
-    <nav>
-      <a href="jogar.html" class="botao">🕹️ Jogar</a>
-      <a href="desenvolvimento.html" class="botao">📘 Desenvolvimento</a>
-      <a href="sobre.html" class="botao">📂 Sobre</a>
-      <a href="materiais.html" class="botao">📎 Materiais</a>
-    </nav>
-  </div>
-
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uber em Crise - Início</title>
+  <link rel="stylesheet" href="estilo.css" />
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: url('Home.png') no-repeat center top;
+      background: url('Home.png') no-repeat center center fixed;
       background-size: cover;
-      min-height: 100vh;
       display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      align-items: center;
+      justify-content: center;
+      align-items: flex-end;
+      min-height: 100vh;
+      padding-bottom: 80px;
     }
 
-    .container {
-      margin-bottom: 50px; /* espaço abaixo do carrinho */
-      text-align: center;
-      background-color: rgba(0, 0, 0, 0.4);
-      padding: 20px;
-      border-radius: 15px;
-    }
-
-    nav {
+    .botoes-container {
       display: flex;
       gap: 20px;
       flex-wrap: wrap;
@@ -37,25 +26,35 @@
     }
 
     .botao {
-    background-color: #4dd0e1; /* azul claro */
-    color: #003c52;            /* azul escuro pro texto */
-    font-weight: bold;
-    padding: 12px 24px;
-    border-radius: 12px;
-    text-decoration: none;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
+      background-color: #4dd0e1; /* Azul claro */
+      color: #003c52; /* Azul escuro para contraste */
+      font-weight: bold;
+      padding: 14px 28px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-size: 18px;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
 
-   .botao:hover {
-    background-color: #00acc1; /* azul médio para hover */
-}
+    .botao:hover {
+      background-color: #00acc1; /* Azul médio no hover */
+    }
 
     @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-        gap: 10px;
+      .botao {
+        width: 100%;
+        text-align: center;
       }
     }
   </style>
+</head>
+<body>
+  <div class="botoes-container">
+    <a href="jogar.html" class="botao">🎮 Jogar</a>
+    <a href="desenvolvimento.html" class="botao">📘 Desenvolvimento</a>
+    <a href="sobre.html" class="botao">📁 Sobre</a>
+    <a href="materiais.html" class="botao">📎 Materiais</a>
+  </div>
 </body>
+</html>
