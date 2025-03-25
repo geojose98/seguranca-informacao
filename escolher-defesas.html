@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Início do Jogo - Uber em Crise</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: url('jogo-pag2.png') no-repeat center center;
+      background-size: cover;
+      min-height: 100vh;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      padding: 5vh;
+    }
+
+    .botao-escolher {
+      padding: 14px 28px;
+      font-size: 18px;
+      font-weight: bold;
+      background-color: #ffce00;
+      color: #000;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+      transition: 0.3s;
+    }
+
+    .botao-escolher:hover {
+      background-color: #e6b800;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        background: url('jogo-pag2-cell.png') no-repeat center center;
+        background-size: cover;
+        padding: 20px;
+        justify-content: center;
+      }
+
+      .botao-escolher {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="botao-escolher" onclick="window.location.href='escolher-defesas.html'">🛡️ Escolher suas Defesas</button>
+</body>
+</html>
