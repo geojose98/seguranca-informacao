@@ -19,15 +19,16 @@
 
     h1 {
       text-align: center;
-      font-size: 3em;
+      font-size: 2.6em;
       color: #ffe600;
       margin-bottom: 10px;
     }
 
-    p {
+    p#subtitulo {
       text-align: center;
-      margin-bottom: 30px;
       font-size: 1.2em;
+      margin-bottom: 30px;
+      color: #ccc;
     }
 
     .container {
@@ -46,12 +47,15 @@
       cursor: pointer;
       transition: transform 0.2s, border 0.3s;
       border: 4px solid transparent;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .card img {
       width: 100%;
-      height: 180px;        /* define a altura fixa */
-      object-fit: cover;    /* garante que a imagem preencha o espaço */
+      height: 180px;
+      object-fit: cover;
       display: block;
     }
 
@@ -92,12 +96,19 @@
   </style>
 </head>
 <body>
-  <h1>Pense bem e monte sua defesa...</h1>
-  <p>Escolha 5.</p>
+  <h1 id="titulo">Pense bem e monte sua defesa...</h1>
+  <p id="subtitulo">Escolha 5.</p>
+
   <div class="container" id="cards-container"></div>
   <button id="confirmar" class="botao-confirmar" disabled onclick="confirmarEscolhas()">👉 Rodada 1</button>
 
   <script>
+    const nomeGrupo = localStorage.getItem('grupo');
+    if (nomeGrupo) {
+      document.getElementById('titulo').textContent = `Pense bem, ${nomeGrupo}, e monte sua defesa...`;
+      document.getElementById('subtitulo').textContent = `Escolha 5 itens que representem a estratégia do grupo "${nomeGrupo}".`;
+    }
+
     const defesas = [
       { id: 1, titulo: "Pagamento sigiloso a hackers", desc: "Negociação direta com invasores para exclusão dos dados obtidos e manutenção da reputação da empresa.", imagem: "defesa1.png" },
       { id: 2, titulo: "Treinamento em cultura de segurança", desc: "Capacitação de equipes para adoção de comportamentos éticos e seguros no manuseio de dados e sistemas.", imagem: "defesa2.png" },
