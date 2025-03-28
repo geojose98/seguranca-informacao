@@ -1,0 +1,182 @@
+{
+  "1": {
+    "titulo": "Pagamento sigiloso a hackers",
+    "acerto": false,
+    "categoria": "❌",
+    "vulnerabilidades": "ausência de plano de resposta, incentivo à extorsão, violação de confiança pública.",
+    "principios": "Confidencialidade, Responsabilidade, Transparência.",
+    "conformidade": [
+      "LGPD (art. 48): exige notificação imediata à ANPD e aos titulares afetados.",
+      "GDPR (art. 33): impõe notificação à autoridade de proteção de dados em até 72h após a detecção do incidente.",
+      "ISO/IEC 27035: estabelece diretrizes para planejamento e execução da gestão de incidentes de segurança da informação."
+    ],
+    "explicacao": "Negociar com hackers não é apenas antiético — é ilegal. A decisão da Uber de pagar para ocultar o incidente gerou graves consequências legais e destruiu sua credibilidade. Leis e normas exigem transparência e comunicação com autoridades e usuários."
+  },
+  "2": {
+    "titulo": "Treinamento em cultura de segurança",
+    "acerto": true,
+    "categoria": "✅",
+    "vulnerabilidades": "erro humano, negligência, falhas de conduta ética.",
+    "principios": "Responsabilidade, Autenticidade, Prevenção.",
+    "conformidade": [
+      "ISO/IEC 27002 (6.3.1): exige a promoção de uma cultura de segurança por meio de treinamentos.",
+      "LGPD (art. 50, §2º): recomenda a adoção de boas práticas e governança, incluindo capacitação.",
+      "GDPR (art. 39): impõe que o DPO monitore e promova a conscientização e treinamento dos colaboradores."
+    ],
+    "explicacao": "Segurança começa nas pessoas. Treinamentos frequentes formam uma cultura organizacional ética, onde práticas seguras são parte do dia a dia e ajudam a prevenir riscos antes que eles se materializem."
+  },
+  "3": {
+    "titulo": "Lounge premium para funcionários",
+    "acerto": "parcial",
+    "categoria": "⚠️",
+    "vulnerabilidades": "falta de controle de acesso, ausência de gestão de risco, falhas operacionais.",
+    "principios": "foco em bem-estar, não em segurança.",
+    "conformidade": [
+      "Não aplicável: a medida não se relaciona com diretrizes da LGPD, GDPR ou ISO/IEC 27001/27002."
+    ],
+    "explicacao": "Benefícios para colaboradores são importantes, mas não substituem ações concretas para proteção de dados e sistemas. Em uma crise, esse tipo de ação não tem impacto prático."
+  },
+  "4": {
+    "titulo": "Firewall e monitoramento contínuo",
+    "acerto": true,
+    "categoria": "✅",
+    "vulnerabilidades": "acessos indevidos, ataques externos, movimentações suspeitas.",
+    "principios": "Confidencialidade, Disponibilidade, Detecção.",
+    "conformidade": [
+      "ISO/IEC 27002 (8.16): recomenda o uso de sistemas de monitoramento para identificar comportamentos anômalos.",
+      "LGPD (art. 46): exige medidas técnicas para proteger os dados pessoais.",
+      "GDPR (art. 32): exige implementação de medidas técnicas e organizacionais apropriadas para garantir a segurança dos dados."
+    ],
+    "explicacao": "Monitorar constantemente sua rede é como ter um alarme ativo: permite identificar ataques rapidamente e agir antes que causem danos. Essa medida teria sido crucial para detectar o ataque de 2016."
+  },
+  "5": {
+    "titulo": "Ocultação do vazamento de dados",
+    "acerto": false,
+    "categoria": "❌",
+    "vulnerabilidades": "perda de confiança pública, violação legal, ausência de rastreabilidade.",
+    "principios": "Transparência, Responsabilidade, Confidencialidade.",
+    "conformidade": [
+      "LGPD (art. 48): exige que controladores de dados comuniquem incidentes de segurança à ANPD e aos titulares imediatamente.",
+      "GDPR (arts. 33 e 34): requer notificação à autoridade supervisora e, em certos casos, aos titulares dos dados.",
+      "ISO/IEC 27035: indica que a resposta a incidentes deve incluir comunicação apropriada e tempestiva."
+    ],
+    "explicacao": "O erro da Uber foi esconder o vazamento por mais de um ano. Isso gerou multas, processos e uma crise de imagem. A legislação exige notificação imediata — e a ética também."
+  },
+  "6": {
+    "titulo": "Backup criptografado",
+    "acerto": true,
+    "categoria": "✅",
+    "vulnerabilidades": "vazamento de dados, sequestro de informações, perda de integridade.",
+    "principios": "Confidencialidade, Integridade, Resiliência.",
+    "conformidade": [
+      "LGPD (art. 46): recomenda uso de medidas técnicas de segurança para proteção contra acessos não autorizados.",
+      "GDPR (art. 32): sugere criptografia como medida técnica de proteção.",
+      "ISO/IEC 27001 (A.12.3): trata de cópias de segurança como parte da continuidade do negócio."
+    ],
+    "explicacao": "A criptografia torna os dados ilegíveis para quem não tem a chave. Mesmo que o hacker consiga acesso, ele não poderá usar a informação. É uma camada essencial de proteção."
+  },
+  "7": {
+    "titulo": "Contratação de influenciadores digitais",
+    "acerto": "parcial",
+    "categoria": "⚠️",
+    "vulnerabilidades": "riscos técnicos, falhas de infraestrutura, falta de governança.",
+    "principios": "Responsabilidade, Transparência.",
+    "conformidade": [
+      "Não aplicável: medida de marketing sem vínculo com a segurança da informação segundo normas ISO, LGPD ou GDPR."
+    ],
+    "explicacao": "Melhorar a imagem da marca não resolve falhas internas graves. Segurança da informação não é marketing — é gestão de riscos reais."
+  },
+  "8": {
+    "titulo": "Acordos de confidencialidade (NDAs)",
+    "acerto": true,
+    "categoria": "✅",
+    "vulnerabilidades": "vazamento interno, exposição de informações sigilosas, uso indevido de dados.",
+    "principios": "Confidencialidade, Responsabilidade.",
+    "conformidade": [
+      "LGPD (art. 6º, X): destaca o princípio da responsabilização e prestação de contas.",
+      "ISO/IEC 27001 (cláusula 7.2.2): orienta que todos os colaboradores compreendam suas responsabilidades de segurança."
+    ],
+    "explicacao": "Formalizar compromissos de sigilo reforça a importância da proteção de dados e ajuda juridicamente em caso de descumprimento. É uma base de qualquer política de segurança."
+  },
+  "9": {
+    "titulo": "Plano de resposta a incidentes",
+    "acerto": true,
+    "categoria": "✅",
+    "vulnerabilidades": "improviso em crises, desorganização, atrasos na comunicação.",
+    "principios": "Responsabilidade, Continuidade, Prevenção.",
+    "conformidade": [
+      "ISO/IEC 27035: orienta como elaborar, manter e testar planos de resposta a incidentes.",
+      "LGPD (art. 48): obriga notificação imediata às autoridades e usuários.",
+      "GDPR (art. 33): exige notificação em até 72 horas após o conhecimento do incidente."
+    ],
+    "explicacao": "Ter um plano pré-definido permite agir com rapidez e ética em momentos críticos. Evita decisões ilegais, como pagar hackers ou ocultar falhas."
+  },
+  "10": {
+    "titulo": "Registro de propriedade intelectual",
+    "acerto": "parcial",
+    "categoria": "⚠️",
+    "vulnerabilidades": "falhas operacionais, perda de dados, ausência de proteção cibernética.",
+    "principios": "foco estratégico, não técnico.",
+    "conformidade": [
+      "ISO/IEC 27002 (5.9): trata do gerenciamento de propriedade intelectual como ativo de informação."
+    ],
+    "explicacao": "Registrar inovações protege o capital intelectual, mas não os dados dos usuários nem impede vazamentos. É uma medida de negócio, não de segurança direta."
+  },
+  "11": {
+    "titulo": "Plano de expansão internacional",
+    "acerto": "parcial",
+    "categoria": "⚠️",
+    "vulnerabilidades": "ausência de políticas internas de segurança, descontrole organizacional, priorização de crescimento ao invés de proteção.",
+    "principios": "Responsabilidade, Prevenção.",
+    "conformidade": [
+      "Não aplicável: estratégia de crescimento sem vínculo com práticas normativas de segurança."
+    ],
+    "explicacao": "Expandir mercados sem consolidar segurança amplia riscos. Crescer sem base sólida foi um dos erros da Uber."
+  },
+  "12": {
+    "titulo": "Política de retenção de conhecimento",
+    "acerto": true,
+    "categoria": "✅",
+    "vulnerabilidades": "perda de conhecimento organizacional, dependência de pessoas-chave.",
+    "principios": "Integridade, Continuidade, Disponibilidade.",
+    "conformidade": [
+      "ISO/IEC 27002 (5.31): orienta políticas para retenção de conhecimento essencial.",
+      "LGPD (art. 50, §2º): sugere boas práticas organizacionais para proteção de dados pessoais."
+    ],
+    "explicacao": "Segurança também é garantir que o conhecimento fique na empresa. Documentar processos evita dependência de pessoas e fortalece a governança."
+  },
+  "13": {
+    "titulo": "Silenciamento de denúncias internas",
+    "acerto": false,
+    "categoria": "❌",
+    "vulnerabilidades": "cultura tóxica, fraudes internas, impunidade organizacional.",
+    "principios": "Transparência, Ética, Responsabilidade.",
+    "conformidade": [
+      "LGPD (art. 50): incentiva políticas que valorizem boas práticas, ética e transparência.",
+      "ISO/IEC 27001: sugere que a alta direção promova cultura de melhoria contínua e responsabilidade."
+    ],
+    "explicacao": "Ignorar denúncias destrói a cultura da organização. Foi uma das falhas mais graves no caso real da Uber. Segurança começa com escuta e resposta às pessoas."
+  },
+  "14": {
+    "titulo": "Campanha de marketing global",
+    "acerto": "parcial",
+    "categoria": "⚠️",
+    "vulnerabilidades": "falhas estruturais de segurança, ausência de medidas preventivas.",
+    "principios": "Confidencialidade, Responsabilidade.",
+    "conformidade": [
+      "Não aplicável: ação de comunicação que não se vincula diretamente às normas de segurança da informação."
+    ],
+    "explicacao": "Promover a imagem sem corrigir os problemas é perigoso. Pode aumentar a desconfiança quando a verdade vem à tona."
+  },
+  "15": {
+    "titulo": "Uniformes personalizados",
+    "acerto": "parcial",
+    "categoria": "⚠️",
+    "vulnerabilidades": "todas as relacionadas à segurança digital e ética institucional.",
+    "principios": "Nenhum diretamente aplicável.",
+    "conformidade": [
+      "Não aplicável: estética visual sem relação com gestão de riscos ou proteção da informação."
+    ],
+    "explicacao": "Uniformes fortalecem identidade visual, mas são irrelevantes diante de riscos de segurança. Priorize o essencial."
+  }
+}
