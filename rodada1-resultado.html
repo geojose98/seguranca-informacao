@@ -11,34 +11,31 @@
       background-color: #111;
       color: #fff;
       padding: 40px 20px;
-      text-align: center;
+      text-align: left;
     }
-
     h1 {
       color: #ffe600;
-      font-size: 2.2em;
-      margin-bottom: 20px;
+      font-size: 2em;
+      text-align: center;
     }
-
-    .mensagem {
-      font-size: 1.2em;
-      max-width: 800px;
-      margin: 0 auto 30px auto;
-      line-height: 1.6;
+    .bloco-feedback {
+      background: #1f1f1f;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px 0;
     }
-
-    .mensagem strong {
-      color: #00ccff;
+    .bloco-feedback h2 {
+      font-size: 1.1em;
+      color: #ffe600;
+      margin-bottom: 10px;
     }
-
-    .mensagem.erro strong {
-      color: #ff4d4d;
+    .bloco-feedback p {
+      margin: 6px 0;
+      font-size: 0.95em;
     }
-
-    .mensagem.alerta strong {
-      color: #ff9900;
-    }
-
+    .correto { border-left: 6px solid #00cc66; }
+    .errado { border-left: 6px solid #ff3333; }
+    .neutro { border-left: 6px solid #999; }
     .botao {
       background-color: #ffe600;
       color: #000;
@@ -48,69 +45,45 @@
       font-size: 1em;
       border-radius: 10px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
-      margin-top: 30px;
-    }
-
-    .botao:hover {
-      background-color: #ffd000;
+      display: block;
+      margin: 40px auto 0 auto;
     }
   </style>
 </head>
 <body>
-
-  <h1>Rodada 1 – Outubro de 2016: O ataque silencioso</h1>
-  <div id="resultado" class="mensagem">Carregando resultado...</div>
-
+  <h1>Rodada 1 - Resultado</h1>
+  <div id="feedbackContainer"></div>
   <button class="botao" onclick="irParaProxima()">➡️ Próxima Rodada</button>
 
   <script>
+    const feedbacks = {
+      1: { titulo: "Pagamento sigiloso a hackers", tipo: "errado", texto: "Negociar com hackers é ilegal. A LGPD (art. 48) exige notificação imediata. A escolha da Uber em 2016 causou multas e perda de reputação." },
+      2: { titulo: "Treinamento em cultura de segurança", tipo: "correto", texto: "Treinar equipes evita erros humanos e cria cultura de prevenção. É recomendado pela ISO/IEC 27002 e LGPD." },
+      3: { titulo: "Lounge premium para funcionários", tipo: "neutro", texto: "Benefícios são bons, mas não impactam a segurança de informação diretamente." },
+      4: { titulo: "Firewall e monitoramento contínuo", tipo: "correto", texto: "Monitoramento constante previne acessos indevidos. Exigido pela ISO 27002 (8.16) e LGPD (art. 46)." },
+      5: { titulo: "Ocultação do vazamento de dados", tipo: "errado", texto: "Esconder vazamentos é ilegal. A LGPD exige transparência. Esse foi o erro da Uber em 2016." },
+      6: { titulo: "Backup criptografado", tipo: "correto", texto: "A criptografia protege mesmo que o invasor acesse os dados. Exigida pela LGPD e GDPR." },
+      7: { titulo: "Contratação de influenciadores", tipo: "neutro", texto: "Melhorar imagem não protege dados nem evita ataques." },
+      8: { titulo: "Acordos de confidencialidade (NDAs)", tipo: "correto", texto: "Reforçam o compromisso com o sigilo. Está alinhado à LGPD e ISO 27001." },
+      9: { titulo: "Plano de resposta a incidentes", tipo: "correto", texto: "Evita improviso e orienta respostas éticas e rápidas. Ponto chave da ISO/IEC 27035." },
+      10: { titulo: "Registro de propriedade intelectual", tipo: "neutro", texto: "Protege inovações, mas não evita ataques nem vazamentos." },
+      11: { titulo: "Plano de expansão internacional", tipo: "neutro", texto: "Crescer sem proteger é arriscado. Expansão não evita falhas." },
+      12: { titulo: "Política de retenção de conhecimento", tipo: "correto", texto: "Evita perda de saber estratégico. Alinhado à ISO 27002 (5.31)." },
+      13: { titulo: "Silenciamento de denúncias internas", tipo: "errado", texto: "Viola ética e transparência. Repetiu um erro grave da Uber." },
+      14: { titulo: "Campanha de marketing global", tipo: "neutro", texto: "Imagem não substitui segurança. Não resolve falhas estruturais." },
+      15: { titulo: "Uniformes personalizados", tipo: "neutro", texto: "Refletem identidade, mas não protegem dados nem sistemas." },
+    };
+
     const escolhas = JSON.parse(localStorage.getItem('defesasEscolhidas')) || [];
+    const container = document.getElementById('feedbackContainer');
 
-    const corretas = [6, 4, 9]; // Backup, Firewall, Resposta Incidentes
-    const antiEtica = 1; // Pagamento sigiloso
-
-    const acertos = escolhas.filter(id => corretas.includes(id));
-    const cometeuErroGrave = escolhas.includes(antiEtica);
-
-    const resultadoDiv = document.getElementById('resultado');
-
-    if (acertos.length === 3 && !cometeuErroGrave) {
-      resultadoDiv.classList.add('mensagem', 'acerto');
-      resultadoDiv.innerHTML = `
-        <strong>Parabéns!</strong> Sua equipe escolheu as principais medidas técnicas e estratégicas para proteger a Uber do ataque.
-        <br><br>
-        A <strong>criptografia</strong> de backups garantiria que os dados estivessem ilegíveis (LGPD art. 46). O <strong>firewall</strong> com monitoramento ativo (ISO 27002, controle 8.16) teria prevenido o acesso. 
-        E um <strong>plano de resposta a incidentes</strong> (ISO 27035) conduziria a empresa de forma ética.
-      `;
-    } else if (acertos.length >= 1 && acertos.length <= 2) {
-      resultadoDiv.classList.add('mensagem', 'parcial');
-      resultadoDiv.innerHTML = `
-        <strong>Você tomou boas decisões, mas não suficientes para conter a crise.</strong>
-        <br><br>
-        Medidas como criptografia e resposta a incidentes são um bom começo — mas sem monitoramento contínuo, sua empresa continuaria vulnerável. 
-        Segurança da informação exige ações técnicas e conduta ética.
-      `;
-    } else if (cometeuErroGrave) {
-      resultadoDiv.classList.add('mensagem', 'alerta');
-      resultadoDiv.innerHTML = `
-        ⚠️ <strong>Cuidado!</strong> Você escolheu uma medida ilegal e antiética: <strong>pagar para esconder o vazamento</strong>.
-        <br><br>
-        Essa foi a decisão da Uber em 2016 — e gerou uma multa de US$ 148 milhões. A LGPD (art. 48) exige notificação imediata em caso de incidente. 
-        <br><br>
-        Esconder o problema <strong>não é uma solução</strong>.
-      `;
-    } else {
-      resultadoDiv.classList.add('mensagem', 'erro');
-      resultadoDiv.innerHTML = `
-        <strong>Você falhou em proteger a empresa.</strong>
-        <br><br>
-        As defesas escolhidas não impediram o ataque. 
-        Benefícios internos ou campanhas publicitárias não são suficientes contra ameaças reais. 
-        <br><br>
-        Segurança da informação precisa ser levada a sério.
-      `;
-    }
+    escolhas.forEach(id => {
+      const info = feedbacks[id];
+      const bloco = document.createElement('div');
+      bloco.className = `bloco-feedback ${info.tipo}`;
+      bloco.innerHTML = `<h2>${info.titulo}</h2><p>${info.texto}</p>`;
+      container.appendChild(bloco);
+    });
 
     function irParaProxima() {
       window.location.href = 'rodada2-historia.html';
