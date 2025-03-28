@@ -1,102 +1,146 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <title>Rodada 1 – Resultado</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rodada 1 – Avaliação</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      background-color: #1a1a1a;
+      background-color: #121212;
       color: #fff;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 30px;
+      padding: 20px;
     }
+
     h1 {
       color: #ffe600;
-      font-size: 2em;
+      font-size: 1.8em;
+      margin-bottom: 10px;
     }
-    h2 {
-      color: #00ccff;
-      margin-top: 30px;
+
+    .sub {
+      font-size: 0.95em;
+      color: #ccc;
+      margin-bottom: 30px;
     }
-    h3 {
-      color: #fff;
-      margin-bottom: 0;
-    }
-    .feedback {
-      background-color: #2a2a2a;
-      border-radius: 10px;
+
+    .feedback-card {
+      background-color: #1e1e1e;
+      border-left: 6px solid #333;
+      border-radius: 8px;
       padding: 20px;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
-    .botao-voltar {
+
+    .feedback-card h2 {
+      font-size: 1.2em;
+      color: #00ccff;
+      margin-bottom: 10px;
+    }
+
+    .feedback-card[data-categoria="❌"] {
+      border-left-color: #ff4c4c;
+    }
+
+    .feedback-card[data-categoria="✅"] {
+      border-left-color: #4caf50;
+    }
+
+    .feedback-card[data-categoria="⚠️"] {
+      border-left-color: #ffc107;
+    }
+
+    .feedback-card ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .feedback-card li {
+      margin-bottom: 5px;
+      line-height: 1.4;
+    }
+
+    .feedback-card strong {
+      color: #fff;
+    }
+
+    .final-msg {
+      background-color: #252525;
+      padding: 20px;
+      border-left: 5px solid #ffe600;
+      border-radius: 8px;
       margin-top: 40px;
+      font-size: 1.1em;
+    }
+
+    .botao {
+      margin-top: 30px;
+      padding: 12px 24px;
       background-color: #ffe600;
       color: #000;
-      padding: 12px 24px;
-      font-size: 16px;
       font-weight: bold;
       border: none;
       border-radius: 8px;
       cursor: pointer;
-      text-decoration: none;
       display: inline-block;
     }
   </style>
 </head>
 <body>
   <h1>🌍 Rodada 1: Outubro de 2016 – O ataque silencioso</h1>
-  <p>A seguir, confira o feedback detalhado com base nas escolhas do seu grupo.</p>
+  <p class="sub">A seguir, confira o feedback detalhado com base nas escolhas do seu grupo.</p>
+  <div id="feedback-container"></div>
+  <div id="final-msg" class="final-msg"></div>
+  <button class="botao" onclick="proximaRodada()">Próxima etapa</button>
 
-  <div class="feedback">
-    <h2>1. Pagamento sigiloso a hackers ❌</h2>
-    <ul>
-      <li><strong>🔎 Vulnerabilidades ignoradas:</strong> ausência de plano de resposta, incentivo à extorsão, violação de confiança pública.</li>
-      <li><strong>📌 Princípios violados:</strong> Confidencialidade, Responsabilidade, Transparência.</li>
-      <li><strong>📜 Conformidade:</strong>
-        <ul>
-          <li>LGPD (art. 48): exige notificação imediata à ANPD e aos titulares afetados.</li>
-          <li>GDPR (art. 33): impõe notificação à autoridade de proteção de dados em até 72h após a detecção do incidente.</li>
-          <li>ISO/IEC 27035: estabelece diretrizes para planejamento e execução da gestão de incidentes de segurança da informação.</li>
-        </ul>
-      </li>
-      <li><strong>🧠 Explicação pedagógica:</strong> Negociar com hackers não é apenas antiético — é ilegal. A decisão da Uber de pagar para ocultar o incidente gerou graves consequências legais e destruiu sua credibilidade. Leis e normas exigem transparência e comunicação com autoridades e usuários.</li>
-    </ul>
-  </div>
+  <script>
+    async function carregarFeedback() {
+      const selecionadas = JSON.parse(localStorage.getItem('defesasEscolhidas') || '[]');
+      const resposta = await fetch('feedbackRodada1.json');
+      const feedbackData = await resposta.json();
 
-  <div class="feedback">
-    <h2>2. Treinamento em cultura de segurança ✅</h2>
-    <ul>
-      <li><strong>🔎 Vulnerabilidades tratadas:</strong> erro humano, negligência, falhas de conduta ética.</li>
-      <li><strong>📌 Princípios protegidos:</strong> Responsabilidade, Autenticidade, Prevenção.</li>
-      <li><strong>📜 Conformidade:</strong>
-        <ul>
-          <li>ISO/IEC 27002 (6.3.1): exige a promoção de uma cultura de segurança por meio de treinamentos.</li>
-          <li>LGPD (art. 50, §2º): recomenda a adoção de boas práticas e governança, incluindo capacitação.</li>
-          <li>GDPR (art. 39): impõe que o DPO monitore e promova a conscientização e treinamento dos colaboradores.</li>
-        </ul>
-      </li>
-      <li><strong>🧠 Explicação pedagógica:</strong> Segurança começa nas pessoas. Treinamentos frequentes formam uma cultura organizacional ética, onde práticas seguras são parte do dia a dia e ajudam a prevenir riscos antes que eles se materializem.</li>
-    </ul>
-  </div>
+      const container = document.getElementById('feedback-container');
+      let acertos = 0;
 
-  <div class="feedback">
-    <h2>3. Lounge premium para funcionários ⚠️</h2>
-    <ul>
-      <li><strong>🔎 Vulnerabilidades ignoradas:</strong> falta de controle de acesso, ausência de gestão de risco, falhas operacionais.</li>
-      <li><strong>📌 Princípios não relacionados diretamente:</strong> foco em bem-estar, não em segurança.</li>
-      <li><strong>📜 Conformidade:</strong>
-        <ul>
-          <li>Não aplicável: a medida não se relaciona com diretrizes da LGPD, GDPR ou ISO/IEC 27001/27002.</li>
-        </ul>
-      </li>
-      <li><strong>🧠 Explicação pedagógica:</strong> Benefícios para colaboradores são importantes, mas não substituem ações concretas para proteção de dados e sistemas. Em uma crise, esse tipo de ação não tem impacto prático.</li>
-    </ul>
-  </div>
+      selecionadas.forEach(id => {
+        const fb = feedbackData[id];
+        if (!fb) return;
 
-  <a href="rodada1-conclusao.html" class="botao-voltar">Próxima etapa</a>
+        if (fb.acerto === true) acertos++;
+
+        const card = document.createElement('div');
+        card.classList.add('feedback-card');
+        card.dataset.categoria = fb.categoria;
+        card.innerHTML = `
+          <h2>${id}. ${fb.titulo} ${fb.categoria}</h2>
+          <ul>
+            <li><strong>Vulnerabilidades ${fb.acerto === true ? 'tratadas' : fb.acerto === false ? 'ignoradas' : 'não relacionadas'}:</strong> ${fb.vulnerabilidades}</li>
+            <li><strong>Princípios ${fb.acerto === true ? 'protegidos' : fb.acerto === false ? 'violados' : 'não relacionados diretamente'}:</strong> ${fb.principios}</li>
+            <li><strong>Conformidade:</strong>
+              <ul>${fb.conformidade.map(l => `<li>✔ ${l}</li>`).join('')}</ul>
+            </li>
+            <li><strong>Explicação pedagógica:</strong> ${fb.explicacao}</li>
+          </ul>
+        `;
+        container.appendChild(card);
+      });
+
+      const finalMsg = document.getElementById('final-msg');
+      if (acertos === 5) {
+        finalMsg.innerHTML = "🟢 <strong>Acerto Total:</strong> Parabéns! Suas escolhas formaram uma defesa completa contra o ataque. Medidas técnicas como firewall e criptografia, combinadas com estrutura de resposta, teriam evitado a crise vivida pela Uber.";
+      } else if (acertos >= 2) {
+        finalMsg.innerHTML = "🟡 <strong>Acerto Parcial:</strong> Você tomou decisões relevantes, mas ainda deixou pontos críticos vulneráveis. A ausência de monitoramento ou resposta estruturada comprometeria a proteção da empresa.";
+      } else {
+        finalMsg.innerHTML = "🔴 <strong>Nenhum Acerto:</strong> Sua equipe ignorou pontos fundamentais e acabou repetindo os erros reais da Uber. A falta de ações técnicas e éticas deixaria a organização vulnerável e exposta.";
+      }
+    }
+
+    function proximaRodada() {
+      window.location.href = 'rodada2-historia.html';
+    }
+
+    carregarFeedback();
+  </script>
 </body>
 </html>
