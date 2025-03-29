@@ -1,0 +1,176 @@
+{
+  "1": {
+    "titulo": "Pagamento sigiloso a hackers",
+    "acerto": false,
+    "categoria": "❌",
+    "vulnerabilidades": "incentivo à corrupção, ausência de ética corporativa, gestão de crise falha.",
+    "principios": "Transparência, Responsabilidade, Ética.",
+    "conformidade": [
+      "LGPD (art. 48): exige comunicação de incidentes às autoridades e titulares.",
+      "ISO/IEC 27035: orienta que a resposta a incidentes seja clara e documentada.",
+      "GDPR (art. 33): obriga notificação em até 72 horas após conhecimento do incidente."
+    ],
+    "explicacao": "A cultura da omissão e do suborno contribui para a perda de credibilidade e governança. Isso aprofunda a crise e afasta profissionais éticos da organização."
+  },
+  "2": {
+    "titulo": "Treinamento em cultura de segurança",
+    "acerto": true,
+    "categoria": "✅",
+    "vulnerabilidades": "falhas comportamentais, perda de engajamento, ausência de ética institucional.",
+    "principios": "Ética, Prevenção, Responsabilidade.",
+    "conformidade": [
+      "ISO/IEC 27002 (6.3.1): prevê treinamento contínuo e fortalecimento da cultura de segurança.",
+      "LGPD (art. 50): estimula boas práticas e educação para proteção de dados.",
+      "GDPR (art. 39): exige programas de conscientização em segurança da informação."
+    ],
+    "explicacao": "Equipes bem treinadas resistem melhor a crises e têm clareza sobre procedimentos, inclusive durante mudanças de liderança. Cultura é um ativo estratégico."
+  },
+  "3": {
+    "titulo": "Lounge premium para funcionários",
+    "acerto": "parcial",
+    "categoria": "⚠️",
+    "vulnerabilidades": "não retém conhecimento nem documenta processos, efeito limitado na crise institucional.",
+    "principios": "Valorização pessoal (indireta).",
+    "conformidade": [
+      "Não aplicável."
+    ],
+    "explicacao": "Conforto é importante, mas não retém capital intelectual. Em uma debandada, o que salva é o conhecimento estruturado e documentado — não o sofá confortável."
+  },
+  "4": {
+    "titulo": "Firewall e monitoramento contínuo",
+    "acerto": "parcial",
+    "categoria": "⚠️",
+    "vulnerabilidades": "não resolve perda de pessoas-chave ou conhecimento tácito.",
+    "principios": "Detecção, Prevenção técnica.",
+    "conformidade": [
+      "ISO/IEC 27002 (8.16): cobre proteção técnica, não gestão de pessoas ou conhecimento."
+    ],
+    "explicacao": "Fundamental na segurança digital, mas não impede perda de conhecimento organizacional. Protege sistemas, não ideias."
+  },
+  "5": {
+    "titulo": "Ocultação do vazamento de dados",
+    "acerto": false,
+    "categoria": "❌",
+    "vulnerabilidades": "perda de confiança, impacto na imagem, aprofundamento da crise organizacional.",
+    "principios": "Transparência, Responsabilidade.",
+    "conformidade": [
+      "LGPD (art. 48): exige divulgação de incidentes.",
+      "GDPR (arts. 33 e 34): obriga notificações e transparência."
+    ],
+    "explicacao": "Ocultar crises corrói a cultura interna. Profissionais éticos deixam o barco — e com eles, o conhecimento que sustentava a empresa."
+  },
+  "6": {
+    "titulo": "Backup criptografado",
+    "acerto": "parcial",
+    "categoria": "⚠️",
+    "vulnerabilidades": "protege dados, mas não preserva conhecimento tácito nem processual.",
+    "principios": "Confidencialidade, Continuidade técnica.",
+    "conformidade": [
+      "ISO/IEC 27001 (A.12.3): trata de backups como proteção de dados, não de cultura."
+    ],
+    "explicacao": "É útil em ataques cibernéticos, mas não substitui políticas de documentação, sucessão e retenção de conhecimento humano."
+  },
+  "7": {
+    "titulo": "Contratação de influenciadores digitais",
+    "acerto": "parcial",
+    "categoria": "⚠️",
+    "vulnerabilidades": "foco em imagem externa, sem ação interna de retenção de talentos ou processos.",
+    "principios": "Comunicação externa.",
+    "conformidade": [
+      "Não aplicável."
+    ],
+    "explicacao": "Pode abafar a crise na mídia, mas não resolve os danos internos. Marketing não segura a empresa de pé se o time está saindo."
+  },
+  "8": {
+    "titulo": "Acordos de confidencialidade (NDAs)",
+    "acerto": true,
+    "categoria": "✅",
+    "vulnerabilidades": "protege contra vazamentos, desincentiva saída com informação estratégica.",
+    "principios": "Confidencialidade, Responsabilidade.",
+    "conformidade": [
+      "ISO/IEC 27001 (7.2.2): orienta sobre responsabilidades contratuais.",
+      "LGPD (art. 6º, X): destaca a prestação de contas e proteção de dados."
+    ],
+    "explicacao": "NDAs ajudam a preservar conhecimento mesmo após desligamentos, criando um ambiente de maior segurança jurídica e ética."
+  },
+  "9": {
+    "titulo": "Plano de resposta a incidentes",
+    "acerto": "parcial",
+    "categoria": "⚠️",
+    "vulnerabilidades": "focado em incidentes técnicos; não abrange perda de capital humano.",
+    "principios": "Continuidade operacional.",
+    "conformidade": [
+      "ISO/IEC 27035: cobre resposta a eventos críticos, não retenção de talentos ou conhecimento."
+    ],
+    "explicacao": "É essencial na crise cibernética, mas insuficiente na crise humana e institucional. Aqui, o problema é a fuga de cérebros."
+  },
+  "10": {
+    "titulo": "Registro de propriedade intelectual",
+    "acerto": true,
+    "categoria": "✅",
+    "vulnerabilidades": "perda de inovação, roubo de métodos, fuga de ideias valiosas.",
+    "principios": "Integridade, Proteção de ativos, Continuidade.",
+    "conformidade": [
+      "ISO/IEC 27002 (5.9): orienta sobre proteção de ativos intangíveis.",
+      "LGPD (art. 6º): proteção de dados também se estende a métodos sensíveis."
+    ],
+    "explicacao": "Registrar propriedade intelectual é como colocar um cadeado nas ideias. Garante que a saída de talentos não leve a inteligência da empresa junto."
+  },
+  "11": {
+    "titulo": "Plano de expansão internacional",
+    "acerto": "parcial",
+    "categoria": "⚠️",
+    "vulnerabilidades": "crescimento desorganizado, negligência com a base estrutural.",
+    "principios": "Planejamento estratégico.",
+    "conformidade": [
+      "Não aplicável: estratégia de crescimento sem vínculo com práticas normativas de segurança ou retenção."
+    ],
+    "explicacao": "Expandir em meio à crise interna pode ser desastroso. Mais importante que crescer é consolidar a cultura e processos antes."
+  },
+  "12": {
+    "titulo": "Política de retenção de conhecimento",
+    "acerto": true,
+    "categoria": "✅",
+    "vulnerabilidades": "perda de conhecimento tácito, dependência de pessoas-chave, falhas na sucessão.",
+    "principios": "Continuidade, Integridade, Prevenção.",
+    "conformidade": [
+      "ISO/IEC 27002 (5.31): orienta a retenção e gestão de conhecimento organizacional.",
+      "LGPD (art. 50): incentiva boas práticas de governança."
+    ],
+    "explicacao": "Ter uma política de retenção é vital. Documentar processos, treinar sucessores e preservar aprendizados reduz o impacto de saídas inesperadas."
+  },
+  "13": {
+    "titulo": "Silenciamento de denúncias internas",
+    "acerto": false,
+    "categoria": "❌",
+    "vulnerabilidades": "cultura tóxica, evasão de talentos, impunidade.",
+    "principios": "Ética, Transparência, Responsabilidade.",
+    "conformidade": [
+      "ISO/IEC 27001: recomenda ambiente de melhoria contínua e abertura.",
+      "LGPD (art. 50): reforça práticas éticas e governança."
+    ],
+    "explicacao": "Ambientes opressores afastam os melhores profissionais. O silêncio custa caro: desmoronam a reputação e levam embora o conhecimento."
+  },
+  "14": {
+    "titulo": "Campanha de marketing global",
+    "acerto": "parcial",
+    "categoria": "⚠️",
+    "vulnerabilidades": "desalinhamento com a realidade interna, reforço de imagem em crise.",
+    "principios": "Visibilidade externa (sem base interna).",
+    "conformidade": [
+      "Não aplicável."
+    ],
+    "explicacao": "Investir em imagem sem cuidar da base é como pintar uma casa que está ruindo. Conhecimento interno é o alicerce, não a propaganda."
+  },
+  "15": {
+    "titulo": "Uniformes personalizados",
+    "acerto": "parcial",
+    "categoria": "⚠️",
+    "vulnerabilidades": "irrelevância para retenção de talentos ou proteção organizacional.",
+    "principios": "Identidade visual.",
+    "conformidade": [
+      "Não aplicável."
+    ],
+    "explicacao": "Não é o uniforme que segura o time, é o conhecimento compartilhado, o ambiente seguro e a cultura organizacional fortalecida."
+  }
+}
