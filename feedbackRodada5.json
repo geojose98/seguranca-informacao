@@ -1,0 +1,172 @@
+{
+  "1": {
+    "titulo": "Pagamento sigiloso a hackers",
+    "acerto": false,
+    "categoria": "❌",
+    "vulnerabilidades": "violação de princípios éticos, legalidade e transparência.",
+    "principios": "Ética, Responsabilidade, Transparência.",
+    "conformidade": [
+      "LGPD (art. 48): exige notificação imediata às autoridades e aos titulares.",
+      "GDPR (art. 33): requer notificação à autoridade supervisora.",
+      "ISO/IEC 27035: orienta sobre resposta apropriada e comunicação transparente de incidentes."
+    ],
+    "explicacao": "Pagar para esconder um incidente é uma infração ética e legal. A escolha da Uber em 2016-2017 gerou sanções e desconfiança global. A transparência deve sempre orientar a gestão de crises."
+  },
+  "2": {
+    "titulo": "Treinamento em cultura de segurança",
+    "acerto": "parcial",
+    "categoria": "⚠️",
+    "vulnerabilidades": "não assegura conformidade estrutural ou governança institucional.",
+    "principios": "Consciência, Prevenção, Ética.",
+    "conformidade": [
+      "ISO/IEC 27002 (6.3.1): recomenda treinamentos contínuos de segurança e ética.",
+      "LGPD (art. 50): incentiva boas práticas organizacionais.",
+      "GDPR (art. 39): propõe capacitação e monitoramento contínuo."
+    ],
+    "explicacao": "Capacitar pessoas é uma base importante, mas precisa ser parte de uma estrutura maior. Sem processos de governança, monitoramento e gestão contínua, o treinamento isolado não garante mudanças sustentáveis."
+  },
+  "3": {
+    "titulo": "Lounge premium para funcionários",
+    "acerto": "parcial",
+    "categoria": "⚠️",
+    "vulnerabilidades": "priorização de bem-estar visual sem atuação sobre governança, ética ou segurança.",
+    "principios": "Nenhum diretamente aplicável.",
+    "conformidade": ["Não aplicável."],
+    "explicacao": "Espaços confortáveis são bons para o clima organizacional, mas irrelevantes para governança ou conformidade em segurança da informação. A reconstrução da Uber exigia mais do que conforto: exigia estruturas institucionais."
+  },
+  "4": {
+    "titulo": "Firewall e monitoramento contínuo",
+    "acerto": "parcial",
+    "categoria": "⚠️",
+    "vulnerabilidades": "não resolve falhas organizacionais ou éticas.",
+    "principios": "Detecção, Confidencialidade.",
+    "conformidade": [
+      "ISO/IEC 27002 (8.16): recomenda o monitoramento de eventos.",
+      "LGPD (art. 46): exige medidas técnicas apropriadas.",
+      "GDPR (art. 32): impõe proteção contra riscos."
+    ],
+    "explicacao": "Monitorar sistemas é essencial, mas insuficiente para garantir a governança e a conformidade exigidas após uma crise. A empresa precisava de um sistema contínuo de gestão e supervisão ética institucional."
+  },
+  "5": {
+    "titulo": "Ocultação do vazamento de dados",
+    "acerto": false,
+    "categoria": "❌",
+    "vulnerabilidades": "reincidência do erro de 2016, perda de reputação e sanções legais.",
+    "principios": "Transparência, Ética, Responsabilidade.",
+    "conformidade": [
+      "LGPD (art. 48): exige comunicação imediata.",
+      "GDPR (art. 33): requer notificação às autoridades.",
+      "ISO/IEC 27035: reforça a importância da comunicação apropriada."
+    ],
+    "explicacao": "Ocultar falhas ou incidentes compromete a governança e aprofunda crises. O que a Uber sofreu em 2018 foi reflexo direto de sua omissão institucional anterior."
+  },
+  "6": {
+    "titulo": "Backup criptografado",
+    "acerto": "parcial",
+    "categoria": "⚠️",
+    "vulnerabilidades": "protege dados, mas não assegura ética, transparência ou conformidade estrutural.",
+    "principios": "Confidencialidade, Integridade.",
+    "conformidade": [
+      "LGPD (art. 46): medidas técnicas e administrativas para proteção.",
+      "GDPR (art. 32): criptografia como boa prática.",
+      "ISO/IEC 27001 (A.12.3): continuidade do negócio com cópias seguras."
+    ],
+    "explicacao": "Essencial para proteção técnica, mas incapaz de responder às falhas de governança que a Uber enfrentava. A restauração institucional exigia sistemas de gestão e comitês de ética."
+  },
+  "7": {
+    "titulo": "Contratação de influenciadores digitais",
+    "acerto": false,
+    "categoria": "❌",
+    "vulnerabilidades": "enfoque superficial, sem atuação sobre o problema real.",
+    "principios": "Nenhum aplicável.",
+    "conformidade": ["Não aplicável."],
+    "explicacao": "Marketing sem reforma ética é maquiagem institucional. A Uber tentou restaurar sua imagem sem mudanças estruturais e fracassou."
+  },
+  "8": {
+    "titulo": "Acordos de confidencialidade (NDAs)",
+    "acerto": "parcial",
+    "categoria": "⚠️",
+    "vulnerabilidades": "sem comitê de ética ou políticas que garantam aplicação justa.",
+    "principios": "Confidencialidade, Responsabilidade.",
+    "conformidade": [
+      "LGPD (art. 6º, X): prestação de contas.",
+      "ISO/IEC 27001 (7.2.2): papéis e responsabilidades de segurança."
+    ],
+    "explicacao": "NDAs são úteis, mas, em um contexto de reconstrução institucional, deveriam estar vinculados a um **Comitê de Ética e Compliance**, responsável por investigar violações e garantir transparência e imparcialidade na governança."
+  },
+  "9": {
+    "titulo": "Plano de resposta a incidentes",
+    "acerto": "parcial",
+    "categoria": "⚠️",
+    "vulnerabilidades": "atua em emergências, mas não em governança contínua.",
+    "principios": "Continuidade, Responsabilidade.",
+    "conformidade": [
+      "ISO/IEC 27035: gerenciamento de incidentes.",
+      "LGPD (art. 48): notificação obrigatória.",
+      "GDPR (art. 33): resposta ágil a falhas."
+    ],
+    "explicacao": "Fundamental, mas limitado. A Uber precisava ir além: criar um **SGSI (Sistema de Gestão de Segurança da Informação)**, com base na ISO/IEC 27001, garantindo governança contínua, indicadores, auditorias e melhoria constante."
+  },
+  "10": {
+    "titulo": "Registro de propriedade intelectual",
+    "acerto": "parcial",
+    "categoria": "⚠️",
+    "vulnerabilidades": "protege ativos, mas não responde a crises éticas ou institucionais.",
+    "principios": "Proteção de ativos informacionais.",
+    "conformidade": [
+      "ISO/IEC 27002 (5.9): gestão de propriedade intelectual."
+    ],
+    "explicacao": "Importante para o setor de inovação, mas insuficiente diante de um cenário de crise de reputação e falhas de segurança e governança."
+  },
+  "11": {
+    "titulo": "Plano de expansão internacional",
+    "acerto": false,
+    "categoria": "❌",
+    "vulnerabilidades": "priorização do crescimento sem ajuste da base ética e de governança.",
+    "principios": "Nenhum aplicável.",
+    "conformidade": ["Não aplicável."],
+    "explicacao": "Expandir globalmente após ser penalizada por falhas graves sem mudar estruturas internas apenas aumenta o risco e a exposição negativa."
+  },
+  "12": {
+    "titulo": "Política de retenção de conhecimento",
+    "acerto": "parcial",
+    "categoria": "⚠️",
+    "vulnerabilidades": "conserva saberes organizacionais, mas não resolve falhas éticas ou estruturais.",
+    "principios": "Continuidade, Integridade.",
+    "conformidade": [
+      "ISO/IEC 27002 (5.31): documentação e preservação do conhecimento estratégico.",
+      "LGPD (art. 50): incentivo à governança de dados."
+    ],
+    "explicacao": "Importante para não perder conhecimento técnico e institucional, mas insuficiente para dar conta da restauração ética e de conformidade exigida em 2018."
+  },
+  "13": {
+    "titulo": "Silenciamento de denúncias internas",
+    "acerto": false,
+    "categoria": "❌",
+    "vulnerabilidades": "agrava cultura tóxica e impede reforma institucional.",
+    "principios": "Transparência, Ética.",
+    "conformidade": [
+      "LGPD (art. 50): fomento à cultura organizacional ética.",
+      "ISO/IEC 27001: alta direção como guardiã da integridade institucional."
+    ],
+    "explicacao": "A crise da Uber começou com vozes silenciadas. Qualquer reconstrução ética exige escuta ativa, canais seguros de denúncia e comitês independentes."
+  },
+  "14": {
+    "titulo": "Campanha de marketing global",
+    "acerto": false,
+    "categoria": "❌",
+    "vulnerabilidades": "não corrige falhas estruturais ou éticas.",
+    "principios": "Nenhum aplicável.",
+    "conformidade": ["Não aplicável."],
+    "explicacao": "Sem ações internas efetivas, campanhas externas não convencem. A crise institucional exigia transparência, não apenas propaganda."
+  },
+  "15": {
+    "titulo": "Uniformes personalizados",
+    "acerto": false,
+    "categoria": "❌",
+    "vulnerabilidades": "irrelevante frente à magnitude da crise ética e institucional.",
+    "principios": "Nenhum aplicável.",
+    "conformidade": ["Não aplicável."],
+    "explicacao": "Uniformes reforçam identidade visual, mas nada contribuem em contextos de governança ou compliance. São medidas cosméticas em meio a um cenário que exigia transformação estrutural."
+  }
+}
