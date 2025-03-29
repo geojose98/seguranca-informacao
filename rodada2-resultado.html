@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Rodada 2 – Resultado</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #121212;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #ffe600;
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+
+    .sub {
+      font-size: 0.95em;
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+
+    .feedback-card {
+      background-color: #1e1e1e;
+      border-left: 6px solid #333;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 25px;
+    }
+
+    .feedback-card h2 {
+      font-size: 1.2em;
+      color: #00ccff;
+      margin-bottom: 10px;
+    }
+
+    .feedback-card[data-categoria="❌"] {
+      border-left-color: #ff4c4c;
+    }
+
+    .feedback-card[data-categoria="✅"] {
+      border-left-color: #4caf50;
+    }
+
+    .feedback-card[data-categoria="⚠️"] {
+      border-left-color: #ffc107;
+    }
+
+    .feedback-card ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .feedback-card li {
+      margin-bottom: 5px;
+      line-height: 1.4;
+    }
+
+    .feedback-card strong {
+      color: #fff;
+    }
+
+    .final-msg {
+      background-color: #252525;
+      padding: 20px;
+      border-left: 5px solid #ffe600;
+      border-radius: 8px;
+      margin-top: 40px;
+      font-size: 1.1em;
+    }
+
+    .botao {
+      margin-top: 30px;
+      padding: 12px 24px;
+      background-color: #ffe600;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <h1>💼 Rodada 2: A cultura do silêncio</h1>
+  <p class="sub">Confira abaixo o feedback detalhado com base nas escolhas feitas por seu grupo.</p>
+  <div id="feedback-container"></div>
+  <div id="final-msg" class="final-msg"></div>
+  <button class="botao" onclick="proximaRodada()">Próxima etapa</button>
+
+  <script>
+    async function carregarFeedback() {
+      const selecionadas = JSON.parse(localStorage.getItem('defesasEscolhidas') || '[]');
+      const resposta = await fetch('feedbackRodada2.json');
+      const feedbackData = await resposta.json();
+
+      const container = document.getElementById('feedback-container');
+      let acertos = 0;
+
+      selecionadas.forEach(id => {
+        const fb = feedbackData[id];
+        if (!fb) return;
+
+        if (fb.acerto === true) acertos++;
+
+        const card = document.createElement('div');
+        card.classList.add('feedback-card');
+        card.dataset.categoria = fb.categoria;
+        card.innerHTML = `
+          <h2>${id}. ${fb.titulo} ${fb.categoria}</h2>
+          <ul>
+            <li><strong>Vulnerabilidades ${fb.acerto === true ? 'tratadas' : fb.acerto === false ? 'ignoradas' : 'não relacionadas'}:</strong> ${fb.vulnerabilidades}</li>
+            <li><strong>Princípios ${fb.acerto === true ? 'protegidos' : fb.acerto === false ? 'violados' : 'não relacionados diretamente'}:</strong> ${fb.principios}</li>
+            <li><strong>Conformidade:</strong>
+              <ul>${fb.conformidade.map(l => `<li>✔ ${l}</li>`).join('')}</ul>
+            </li>
+            <li><strong>Explicação pedagógica:</strong> ${fb.explicacao}</li>
+          </ul>
+        `;
+        container.appendChild(card);
+      });
+
+      const finalMsg = document.getElementById('final-msg');
+      if (acertos === 2) {
+        finalMsg.innerHTML = "🟢 <strong>Acerto Total:</strong> Excelente! Seu grupo identificou com precisão as únicas medidas que, de fato, ajudariam a mudar a cultura da Uber e construir um ambiente mais ético e seguro.";
+      } else if (acertos === 1) {
+        finalMsg.innerHTML = "🟡 <strong>Acerto Parcial:</strong> Seu grupo identificou uma boa medida, mas deixou de lado outra ação essencial. Uma mudança de cultura exige tanto capacitação quanto instrumentos formais de proteção e responsabilização.";
+      } else {
+        finalMsg.innerHTML = "🔴 <strong>Nenhum Acerto:</strong> Nenhuma das escolhas ajudaria de fato a mudar a cultura organizacional da Uber. O silêncio institucional e a negligência foram os erros centrais desta rodada.";
+      }
+    }
+
+    function proximaRodada() {
+      window.location.href = 'rodada3-historia.html';
+    }
+
+    carregarFeedback();
+  </script>
+</body>
+</html>
