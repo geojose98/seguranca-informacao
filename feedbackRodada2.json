@@ -1,0 +1,173 @@
+{
+  "1": {
+    "titulo": "Pagamento sigiloso a hackers",
+    "acerto": false,
+    "categoria": "❌",
+    "vulnerabilidades": "incentivo à impunidade, omissão institucional, ausência de transparência.",
+    "principios": "Ética, Responsabilidade, Prestação de contas.",
+    "conformidade": [
+      "LGPD (art. 50): exige boas práticas, transparência e responsabilização.",
+      "ISO/IEC 27001: estimula condutas éticas e cultura de melhoria contínua."
+    ],
+    "explicacao": "Pagamentos para acobertar problemas, seja com hackers ou escândalos internos, representam violação grave de princípios éticos. Essa prática não soluciona a cultura tóxica, apenas a mascara temporariamente."
+  },
+  "2": {
+    "titulo": "Treinamento em cultura de segurança",
+    "acerto": true,
+    "categoria": "✅",
+    "vulnerabilidades": "ambiente tóxico, negligência, ausência de condutas éticas.",
+    "principios": "Ética, Responsabilidade, Prevenção.",
+    "conformidade": [
+      "LGPD (art. 50, §2º): estimula programas de boas práticas e governança.",
+      "ISO/IEC 27002 (6.3.1): exige treinamento contínuo sobre segurança da informação e comportamento ético."
+    ],
+    "explicacao": "A formação contínua em segurança e ética transforma o comportamento dos colaboradores. É a base para um ambiente corporativo saudável, onde assédios e negligências são prevenidos e combatidos com responsabilidade."
+  },
+  "3": {
+    "titulo": "Lounge premium para funcionários",
+    "acerto": "parcial",
+    "categoria": "⚠️",
+    "vulnerabilidades": "invisibilização de problemas estruturais, foco em estética e bem-estar sem abordar riscos reais.",
+    "principios": "Não relacionados diretamente à segurança ou ética institucional.",
+    "conformidade": [
+      "Não aplicável: não há vínculo com políticas de segurança da informação ou governança ética."
+    ],
+    "explicacao": "Ambientes agradáveis são importantes, mas sem mudanças culturais reais, não resolvem crises de ética ou segurança. Um lounge não impede assédio nem fortalece governança."
+  },
+  "4": {
+    "titulo": "Firewall e monitoramento contínuo",
+    "acerto": "parcial",
+    "categoria": "⚠️",
+    "vulnerabilidades": "infraestrutura técnica, mas não resolve questões humanas ou culturais.",
+    "principios": "Detecção, Confidencialidade.",
+    "conformidade": [
+      "ISO/IEC 27002 (8.16): controle técnico importante, mas limitado ao nível técnico."
+    ],
+    "explicacao": "Essa medida protege contra ataques cibernéticos, mas não combate crises éticas. A denúncia de Fowler foi um problema de cultura e omissão humana — e não de falha técnica."
+  },
+  "5": {
+    "titulo": "Ocultação do vazamento de dados",
+    "acerto": false,
+    "categoria": "❌",
+    "vulnerabilidades": "encobrimento de práticas antiéticas, agravamento da crise, violação de confiança pública.",
+    "principios": "Transparência, Prestação de contas.",
+    "conformidade": [
+      "LGPD (art. 6º): reforça a necessidade de clareza e responsabilidade.",
+      "ISO/IEC 27035: incentiva respostas imediatas e comunicativas a incidentes."
+    ],
+    "explicacao": "Ocultar problemas apenas aumenta a crise. No caso da Uber, o silêncio diante de denúncias internas foi o que levou à explosão pública do escândalo."
+  },
+  "6": {
+    "titulo": "Backup criptografado",
+    "acerto": "parcial",
+    "categoria": "⚠️",
+    "vulnerabilidades": "proteção de dados técnicos, mas não humanos.",
+    "principios": "Integridade de dados.",
+    "conformidade": [
+      "LGPD (art. 46): proteção técnica dos dados.",
+      "ISO/IEC 27001 (A.12.3): trata de backup como parte da continuidade de negócios."
+    ],
+    "explicacao": "Criptografia é essencial, mas não é suficiente quando o problema está na cultura institucional e nos comportamentos antiéticos."
+  },
+  "7": {
+    "titulo": "Contratação de influenciadores digitais",
+    "acerto": false,
+    "categoria": "❌",
+    "vulnerabilidades": "desvio de foco, maquiagem reputacional.",
+    "principios": "Imagem sem substância, desinformação.",
+    "conformidade": [
+      "Não aplicável: medida de marketing sem vínculo com segurança ou ética."
+    ],
+    "explicacao": "Campanhas com influenciadores não resolvem escândalos internos. A reputação é construída com coerência entre discurso e prática, e não com marketing vazio."
+  },
+  "8": {
+    "titulo": "Acordos de confidencialidade (NDAs)",
+    "acerto": true,
+    "categoria": "✅",
+    "vulnerabilidades": "vazamento de informações sensíveis, exposição de problemas sem mediação institucional.",
+    "principios": "Confidencialidade, Responsabilidade.",
+    "conformidade": [
+      "LGPD (art. 6º, X): reforça a necessidade de responsabilização.",
+      "ISO/IEC 27001 (cláusula 7.2.2): estimula formalização de responsabilidades com segurança."
+    ],
+    "explicacao": "Os NDAs protegem informações da empresa e ajudam a construir um ambiente de confiança mútua. Mas devem ser usados para proteger dados, e não para silenciar denúncias legítimas."
+  },
+  "9": {
+    "titulo": "Plano de resposta a incidentes",
+    "acerto": "parcial",
+    "categoria": "⚠️",
+    "vulnerabilidades": "estrutura técnica sem articulação com crises de pessoas.",
+    "principios": "Continuidade, Organização.",
+    "conformidade": [
+      "ISO/IEC 27035: aplica-se a incidentes técnicos, não a denúncias de cultura tóxica."
+    ],
+    "explicacao": "Ter um plano é importante, mas precisa incluir protocolos para lidar com denúncias e crises éticas, não só ataques digitais. O caso Fowler foi um incidente humano e institucional."
+  },
+  "10": {
+    "titulo": "Registro de propriedade intelectual",
+    "acerto": false,
+    "categoria": "❌",
+    "vulnerabilidades": "não relacionadas à crise ética ou de conduta.",
+    "principios": "Valorização de ativos, sem relação com cultura.",
+    "conformidade": [
+      "ISO/IEC 27002 (5.9): protege inovação, mas não comportamentos."
+    ],
+    "explicacao": "Registrar patentes ou software não protege os colaboradores nem melhora a cultura interna. Aqui, o problema foi de gestão de pessoas e omissão de lideranças."
+  },
+  "11": {
+    "titulo": "Plano de expansão internacional",
+    "acerto": false,
+    "categoria": "❌",
+    "vulnerabilidades": "crescimento sem ética, expansão de práticas problemáticas.",
+    "principios": "Desgovernança, Pressa, Improviso.",
+    "conformidade": [
+      "Não aplicável: crescimento sem base de segurança ou ética institucional."
+    ],
+    "explicacao": "Crescer enquanto há uma crise interna é multiplicar o problema. A Uber expandiu globalmente enquanto negligenciava sua própria cultura e governança."
+  },
+  "12": {
+    "titulo": "Política de retenção de conhecimento",
+    "acerto": "parcial",
+    "categoria": "⚠️",
+    "vulnerabilidades": "perda de saberes institucionais, mas não aborda comportamento ou ética.",
+    "principios": "Continuidade organizacional.",
+    "conformidade": [
+      "ISO/IEC 27002 (5.31): ajuda na documentação, mas não muda a cultura."
+    ],
+    "explicacao": "Documentar conhecimento é ótimo, mas não responde a crises de ética e valores. O problema aqui era de comportamento — e não de memória organizacional."
+  },
+  "13": {
+    "titulo": "Silenciamento de denúncias internas",
+    "acerto": false,
+    "categoria": "❌",
+    "vulnerabilidades": "incentivo à impunidade, perpetuação de abusos, cultura do medo.",
+    "principios": "Ética, Transparência, Responsabilidade.",
+    "conformidade": [
+      "LGPD (art. 50): estimula boas práticas e governança ética.",
+      "ISO/IEC 27001: indica cultura de prestação de contas e abertura institucional."
+    ],
+    "explicacao": "Silenciar denúncias foi exatamente o erro que Susan Fowler denunciou. Ignorar essas vozes levou a Uber à crise. O PSI precisa incluir canais de escuta e acolhimento às denúncias."
+  },
+  "14": {
+    "titulo": "Campanha de marketing global",
+    "acerto": false,
+    "categoria": "❌",
+    "vulnerabilidades": "desconexão entre imagem e prática, omissão institucional.",
+    "principios": "Aparência sem substância.",
+    "conformidade": [
+      "Não aplicável: medida externa sem vínculo com segurança ou cultura."
+    ],
+    "explicacao": "Marketing não substitui gestão ética. Promover a imagem durante uma crise pode piorar a percepção pública quando os problemas internos forem revelados."
+  },
+  "15": {
+    "titulo": "Uniformes personalizados",
+    "acerto": false,
+    "categoria": "❌",
+    "vulnerabilidades": "invisibilidade das questões reais, foco superficial.",
+    "principios": "Estética institucional.",
+    "conformidade": [
+      "Não aplicável: medida visual sem relevância em segurança da informação ou ética."
+    ],
+    "explicacao": "Uniformes podem ser bonitos, mas não resolvem crises institucionais ou estruturais. Segurança começa com atitudes, não com aparência."
+  }
+}
