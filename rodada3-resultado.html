@@ -127,9 +127,9 @@
       });
 
       const finalMsg = document.getElementById('final-msg');
-      if (acertos >= 2) {
+      if (acertos === 3) {
         finalMsg.innerHTML = "🟢 <strong>Acerto Total:</strong> Muito bem! Sua equipe protegeu o conhecimento organizacional e garantiu os direitos sobre os ativos intelectuais da empresa, evitando a perda de memória estratégica.";
-      } else if (acertos === 1) {
+      } else if (acertos === 1 || acertos === 2) {
         finalMsg.innerHTML = "🟡 <strong>Acerto Parcial:</strong> Sua equipe fez uma boa escolha, mas deixou escapar outra medida essencial. A perda de capital intelectual pode ser irreversível se não for bem gerenciada.";
       } else {
         finalMsg.innerHTML = "🔴 <strong>Nenhum Acerto:</strong> Sua equipe falhou em proteger os ativos de conhecimento. O colapso organizacional da Uber poderia ter sido amenizado com medidas estratégicas bem aplicadas.";
