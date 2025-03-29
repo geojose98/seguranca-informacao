@@ -1,0 +1,172 @@
+{
+  "1": {
+    "titulo": "Pagamento sigiloso a hackers",
+    "acerto": false,
+    "categoria": "❌",
+    "vulnerabilidades": "violação de princípios éticos, legalidade e transparência.",
+    "principios": "Ética, Responsabilidade, Transparência.",
+    "conformidade": [
+      "LGPD (art. 48): exige notificação imediata às autoridades e aos titulares.",
+      "GDPR (art. 33): requer notificação à autoridade supervisora.",
+      "ISO/IEC 27035: orienta sobre resposta apropriada e comunicação transparente de incidentes."
+    ],
+    "explicacao": "Pagar para esconder um incidente é uma infração ética e legal. A escolha da Uber em 2016-2017 gerou sanções e desconfiança global. A transparência deve sempre orientar a gestão de crises."
+  },
+  "2": {
+    "titulo": "Treinamento em cultura de segurança",
+    "acerto": "parcial",
+    "categoria": "⚠️",
+    "vulnerabilidades": "falta de conscientização sobre ética e gestão de incidentes.",
+    "principios": "Responsabilidade, Ética, Consciência Organizacional.",
+    "conformidade": [
+      "ISO/IEC 27002 (6.3.1): recomenda treinamentos contínuos de segurança e ética.",
+      "LGPD (art. 50): incentiva boas práticas de governança.",
+      "GDPR (art. 39): propõe treinamento e monitoramento de práticas seguras."
+    ],
+    "explicacao": "Embora útil, o treinamento isolado não basta em uma crise ética. Precisa estar aliado a processos estruturados de comunicação, rastreabilidade e responsabilização organizacional."
+  },
+  "3": {
+    "titulo": "Lounge premium para funcionários",
+    "acerto": "parcial",
+    "categoria": "⚠️",
+    "vulnerabilidades": "incompatível com resposta institucional, não contribui para a governança.",
+    "principios": "Nenhum diretamente aplicável.",
+    "conformidade": ["Não aplicável."],
+    "explicacao": "Melhorar o ambiente físico não resolve falhas éticas ou legais. Não há relação entre lounge e segurança da informação ou cultura de denúncia."
+  },
+  "4": {
+    "titulo": "Firewall e monitoramento contínuo",
+    "acerto": "parcial",
+    "categoria": "⚠️",
+    "vulnerabilidades": "monitoramento técnico não supre ausência de comunicação ou auditoria.",
+    "principios": "Confidencialidade, Detecção.",
+    "conformidade": [
+      "ISO/IEC 27002 (8.16): recomenda monitoramento técnico contínuo.",
+      "LGPD (art. 46): exige medidas técnicas para proteção.",
+      "GDPR (art. 32): sugere medidas para garantir a segurança de dados."
+    ],
+    "explicacao": "Embora importante, o firewall não substitui uma política de comunicação de incidentes ou rastreabilidade formal. Para responder adequadamente à crise de 2017, a Uber deveria ter implementado sistemas de auditoria de acessos e um plano estruturado de comunicação transparente com autoridades e usuários."
+  },
+  "5": {
+    "titulo": "Ocultação do vazamento de dados",
+    "acerto": false,
+    "categoria": "❌",
+    "vulnerabilidades": "reincidência do erro de 2016, quebra de confiança, crime cibernético.",
+    "principios": "Transparência, Ética, Prestação de Contas.",
+    "conformidade": [
+      "LGPD (art. 48): exige notificação de incidentes.",
+      "GDPR (art. 33): requer comunicação em até 72h.",
+      "ISO/IEC 27035: reforça comunicação e resposta responsáveis."
+    ],
+    "explicacao": "Repetir o erro de esconder o incidente, mesmo com nova gestão, aprofunda a crise institucional e traz consequências legais graves."
+  },
+  "6": {
+    "titulo": "Backup criptografado",
+    "acerto": "parcial",
+    "categoria": "⚠️",
+    "vulnerabilidades": "não resolve o problema de transparência e auditoria.",
+    "principios": "Confidencialidade, Integridade.",
+    "conformidade": [
+      "LGPD (art. 46): proteção contra acessos não autorizados.",
+      "GDPR (art. 32): criptografia como medida técnica.",
+      "ISO/IEC 27001 (A.12.3): continuidade do negócio."
+    ],
+    "explicacao": "É útil para proteção dos dados, mas não ajuda a empresa a comunicar, auditar ou resolver a crise ética que se instalou em 2017."
+  },
+  "7": {
+    "titulo": "Contratação de influenciadores digitais",
+    "acerto": false,
+    "categoria": "❌",
+    "vulnerabilidades": "tentativa de maquiar o problema sem agir na causa.",
+    "principios": "Transparência violada, sem eficácia técnica.",
+    "conformidade": ["Não aplicável."],
+    "explicacao": "Marketing não apaga escândalos éticos. É necessário agir com responsabilidade e demonstrar mudança real nos processos e na cultura organizacional."
+  },
+  "8": {
+    "titulo": "Acordos de confidencialidade (NDAs)",
+    "acerto": "parcial",
+    "categoria": "⚠️",
+    "vulnerabilidades": "utilizados como instrumento de silenciamento em vez de proteção.",
+    "principios": "Responsabilidade, Confidencialidade.",
+    "conformidade": [
+      "LGPD (art. 6º, X): responsabilização e prestação de contas.",
+      "ISO/IEC 27001 (7.2.2): deveres e papéis claros dos colaboradores."
+    ],
+    "explicacao": "NDAs são eficazes se usados corretamente. Mas, se aplicados para encobrir falhas, se tornam cúmplices da crise, como apontado no caso Uber."
+  },
+  "9": {
+    "titulo": "Plano de resposta a incidentes",
+    "acerto": "parcial",
+    "categoria": "⚠️",
+    "vulnerabilidades": "útil apenas se incluir comunicação clara e rastreável.",
+    "principios": "Responsabilidade, Continuidade.",
+    "conformidade": [
+      "ISO/IEC 27035: base para reação a incidentes.",
+      "LGPD (art. 48): exige notificação de vazamentos.",
+      "GDPR (art. 33): notificação em até 72h."
+    ],
+    "explicacao": "Um plano é o ponto de partida. Mas ele precisa prever comunicação ética e rastreabilidade com autoridades e usuários. Sem essas diretrizes claras, o plano de resposta não teria evitado a crise reputacional da Uber."
+  },
+  "10": {
+    "titulo": "Registro de propriedade intelectual",
+    "acerto": "parcial",
+    "categoria": "⚠️",
+    "vulnerabilidades": "não contribui para rastrear ou responder incidentes.",
+    "principios": "Proteção de ativos, mas sem impacto direto.",
+    "conformidade": [
+      "ISO/IEC 27002 (5.9): gestão de ativos de informação."
+    ],
+    "explicacao": "Importante para proteger inovações, mas irrelevante frente a uma crise ética e de comunicação. Não responde ao problema de 2017."
+  },
+  "11": {
+    "titulo": "Plano de expansão internacional",
+    "acerto": false,
+    "categoria": "❌",
+    "vulnerabilidades": "expansão sem base sólida de segurança e governança.",
+    "principios": "Planejamento estratégico mal alinhado.",
+    "conformidade": ["Não aplicável."],
+    "explicacao": "Focar em expansão em meio a uma crise é incoerente. A reputação e a estrutura ética da empresa devem vir antes do crescimento."
+  },
+  "12": {
+    "titulo": "Política de retenção de conhecimento",
+    "acerto": "parcial",
+    "categoria": "⚠️",
+    "vulnerabilidades": "ajuda a manter a memória organizacional, mas não a rastrear ou comunicar incidentes.",
+    "principios": "Continuidade, Integridade.",
+    "conformidade": [
+      "ISO/IEC 27002 (5.31): preservação de conhecimento estratégico.",
+      "LGPD (art. 50): boas práticas organizacionais."
+    ],
+    "explicacao": "Relevante para governança, mas não suficiente para gerenciar uma crise ética com foco em transparência e rastreabilidade."
+  },
+  "13": {
+    "titulo": "Silenciamento de denúncias internas",
+    "acerto": false,
+    "categoria": "❌",
+    "vulnerabilidades": "repressão de vozes, agravamento da crise institucional.",
+    "principios": "Transparência, Ética, Responsabilidade.",
+    "conformidade": [
+      "LGPD (art. 50): incentiva governança transparente.",
+      "ISO/IEC 27001: reforça responsabilidade da alta gestão."
+    ],
+    "explicacao": "Foi justamente o silêncio diante das denúncias que agravou o caso Uber. Silenciar vozes internas compromete toda a cultura organizacional."
+  },
+  "14": {
+    "titulo": "Campanha de marketing global",
+    "acerto": false,
+    "categoria": "❌",
+    "vulnerabilidades": "foco em imagem em vez de resolver falhas estruturais.",
+    "principios": "Nenhum atendido.",
+    "conformidade": ["Não aplicável."],
+    "explicacao": "A Uber tentou usar marketing para amenizar a crise, mas sem ética e transparência, a estratégia se tornou vazia e ineficaz."
+  },
+  "15": {
+    "titulo": "Uniformes personalizados",
+    "acerto": false,
+    "categoria": "❌",
+    "vulnerabilidades": "irrelevante para resposta ética, auditoria ou rastreabilidade.",
+    "principios": "Nenhum diretamente aplicável.",
+    "conformidade": ["Não aplicável."],
+    "explicacao": "Não contribui para segurança, ética ou transparência. Em momentos de crise, o foco deve estar em soluções substantivas, não estéticas."
+  }
+}
