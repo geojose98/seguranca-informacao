@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rodada 3 - Introdução</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #1a1a1a;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 100vh;
+      padding: 20px;
+      text-align: center;
+    }
+
+    picture {
+      width: 100%;
+      max-width: 1200px;
+      margin-bottom: 30px;
+    }
+
+    picture img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+    }
+
+    button {
+      font-family: 'Poppins', sans-serif;
+      padding: 14px 32px;
+      background-color: #ffe600;
+      color: #000;
+      font-weight: bold;
+      font-size: 18px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      margin-bottom: 30px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #f2d400;
+    }
+  </style>
+</head>
+<body>
+  <picture>
+    <!-- Versão para celular -->
+    <source media="(max-width: 768px)" srcset="rodada3-historiacell.png">
+    <!-- Versão para desktop -->
+    <img src="rodada3-historia.png" alt="História da Rodada 3 - Evasão de talentos e perda de conhecimento">
+  </picture>
+
+  <button onclick="window.location.href='rodada3-resultado.html'">Continuar</button>
+</body>
+</html>
