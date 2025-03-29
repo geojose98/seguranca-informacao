@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Rodada 5 – Resultado</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #121212;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #ffe600;
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+
+    .sub {
+      font-size: 0.95em;
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+
+    .feedback-card {
+      background-color: #1e1e1e;
+      border-left: 6px solid #333;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 25px;
+    }
+
+    .feedback-card h2 {
+      font-size: 1.2em;
+      color: #00ccff;
+      margin-bottom: 10px;
+    }
+
+    .feedback-card[data-categoria="❌"] {
+      border-left-color: #ff4c4c;
+    }
+
+    .feedback-card[data-categoria="✅"] {
+      border-left-color: #4caf50;
+    }
+
+    .feedback-card[data-categoria="⚠️"] {
+      border-left-color: #ffc107;
+    }
+
+    .feedback-card ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .feedback-card li {
+      margin-bottom: 5px;
+      line-height: 1.4;
+    }
+
+    .feedback-card strong {
+      color: #fff;
+    }
+
+    .final-msg {
+      background-color: #252525;
+      padding: 20px;
+      border-left: 5px solid #ffe600;
+      border-radius: 8px;
+      margin-top: 40px;
+      font-size: 1.1em;
+    }
+
+    .botao {
+      margin-top: 30px;
+      padding: 12px 24px;
+      background-color: #ffe600;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <h1>🏁 Rodada 5: Reconstrução e Julgamento Final</h1>
+  <p class="sub">Veja agora a análise final com base nas escolhas do seu grupo nesta etapa de encerramento.</p>
+  <div id="feedback-container"></div>
+  <div id="final-msg" class="final-msg"></div>
+  <button class="botao" onclick="proximaRodada()">Encerrar Jogo</button>
+
+  <script>
+    async function carregarFeedback() {
+      const selecionadas = JSON.parse(localStorage.getItem('defesasEscolhidas') || '[]');
+      const resposta = await fetch('feedbackRodada5.json');
+      const feedbackData = await resposta.json();
+
+      const container = document.getElementById('feedback-container');
+      let parcialmenteCorretas = 0;
+
+      selecionadas.forEach(id => {
+        const fb = feedbackData[id];
+        if (!fb) return;
+
+        if (fb.acerto === "parcial") parcialmenteCorretas++;
+
+        const card = document.createElement('div');
+        card.classList.add('feedback-card');
+        card.dataset.categoria = fb.categoria;
+        card.innerHTML = `
+          <h2>${id}. ${fb.titulo} ${fb.categoria}</h2>
+          <ul>
+            <li><strong>Vulnerabilidades ${fb.acerto === "parcial" ? 'parcialmente tratadas' : fb.acerto === false ? 'ignoradas' : 'não relacionadas'}:</strong> ${fb.vulnerabilidades}</li>
+            <li><strong>Princípios ${fb.acerto === "parcial" ? 'parcialmente protegidos' : fb.acerto === false ? 'violados' : 'não relacionados diretamente'}:</strong> ${fb.principios}</li>
+            <li><strong>Conformidade:</strong>
+              <ul>${fb.conformidade.map(l => `<li>✔ ${l}</li>`).join('')}</ul>
+            </li>
+            <li><strong>Explicação pedagógica:</strong> ${fb.explicacao}</li>
+          </ul>
+        `;
+        container.appendChild(card);
+      });
+
+      const finalMsg = document.getElementById('final-msg');
+      if (parcialmenteCorretas >= 4) {
+        finalMsg.innerHTML = "🟡 <strong>Governança em construção:</strong> A Uber inicia um processo de reconstrução institucional, e as ações indicam o esforço de implantar um SGSI e estabelecer uma cultura de compliance. Ainda não há plenitude, mas há direção. As normas ISO/IEC 27001 e 27002 começam a ganhar espaço nos processos; práticas de retenção de conhecimento e cultura de segurança tornam-se parte do cotidiano. A LGPD e a GDPR passam a orientar as condutas, reforçando a ética, a rastreabilidade e o respeito aos titulares de dados. A lição mais importante foi compreendida: proteger a informação é proteger o futuro.";
+      } else if (parcialmenteCorretas >= 1) {
+        finalMsg.innerHTML = "🟠 <strong>Consertos em obra viva:</strong> Algumas medidas indicam esforço, mas ainda são tímidas diante da complexidade da crise. A empresa dá sinais de que começa a compreender a importância da governança da informação, mas o SGSI é frágil ou inexistente, e a cultura ética não se consolida. A proteção ao conhecimento ainda carece de sistematização. A LGPD e a GDPR exigem mais que boas intenções: pedem estrutura, processos rastreáveis e responsabilização clara.";
+      } else {
+        finalMsg.innerHTML = "🔴 <strong>Ciclos que se repetem:</strong> A Uber falhou em consolidar uma governança ética e uma gestão de segurança madura. Ausente de um SGSI, sem planos consistentes, sem responsabilização ativa, a empresa não conseguiu aprender com os próprios erros. Persistem os riscos à integridade dos dados, ao cumprimento da LGPD e do GDPR, e à retenção do conhecimento organizacional. A ausência de pilares sólidos perpetua a vulnerabilidade.";
+      }
+    }
+
+    function proximaRodada() {
+      alert("Parabéns por concluir o jogo! Agora é hora de refletir e aplicar esses aprendizados na prática.");
+      // Redirecionamento futuro pode ser adicionado aqui
+    }
+
+    carregarFeedback();
+  </script>
+</body>
+</html>
