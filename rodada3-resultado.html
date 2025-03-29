@@ -127,7 +127,7 @@
       });
 
       const finalMsg = document.getElementById('final-msg');
-      if (acertos === 2) {
+      if (acertos >= 2) {
         finalMsg.innerHTML = "🟢 <strong>Acerto Total:</strong> Muito bem! Sua equipe protegeu o conhecimento organizacional e garantiu os direitos sobre os ativos intelectuais da empresa, evitando a perda de memória estratégica.";
       } else if (acertos === 1) {
         finalMsg.innerHTML = "🟡 <strong>Acerto Parcial:</strong> Sua equipe fez uma boa escolha, mas deixou escapar outra medida essencial. A perda de capital intelectual pode ser irreversível se não for bem gerenciada.";
