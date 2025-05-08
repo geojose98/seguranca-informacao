@@ -96,13 +96,30 @@
       }
     });
 
+    let mensagemFinal = "";
+
+    if (totalAcertos >= 5) {
+      mensagemFinal = `
+        <p><strong>Excelente desempenho!</strong> Com apenas cinco ações disponíveis, você demonstrou sólida capacidade de análise e tomada de decisão. Suas escolhas revelam entendimento consistente dos princípios da segurança da informação e alinhamento com a LGPD, a GDPR e as normas ISO/IEC. Continue aprofundando seus conhecimentos — você já atua com pensamento estratégico e ético.</p>
+      `;
+    } else if (totalAcertos >= 2) {
+      mensagemFinal = `
+        <p><strong>Bom caminho!</strong> Suas decisões indicam compreensão parcial dos fundamentos da segurança da informação. Algumas escolhas foram bem fundamentadas, enquanto outras carecem de maior alinhamento com a LGPD, a GDPR e as normas da ISO/IEC. Desenvolver uma política de segurança eficaz envolve visão crítica, responsabilidade e análise contextual. Reflita sobre os critérios que orientaram suas seleções e siga evoluindo.</p>
+      `;
+    } else {
+      mensagemFinal = `
+        <p><strong>Hora de reavaliar prioridades.</strong> A segurança da informação vai além de soluções imediatas ou medidas de imagem. Ela se constrói com base em governança, ética, rastreabilidade e responsabilidade institucional. Suas escolhas revelam uma distância dos pilares exigidos pela LGPD, pela GDPR e pelas normas ISO/IEC. Retome os fundamentos, analise os erros e aproveite essa oportunidade para fortalecer seu repertório.</p>
+      `;
+    }
+
     const resumo = document.getElementById("resumoFinal");
     resumo.innerHTML = `
       <p><span class="emoji">✅</span> <strong>${totalAcertos}</strong> respostas corretas</p>
       <p><span class="emoji">⚠️</span> <strong>${totalParciais}</strong> parcialmente corretas</p>
       <p><span class="emoji">❌</span> <strong>${totalErros}</strong> respostas incorretas</p>
       <hr style="border: 0; border-top: 1px solid #444; margin: 30px 0;">
-      <p><strong>Reflexão:</strong> A segurança da informação exige decisões éticas, técnicas e estratégicas. Continue estudando, praticando e aprimorando sua visão crítica. Segurança é um processo contínuo. 👊</p>
+      ${mensagemFinal}
+      <p><em>Reflexão: A segurança da informação exige decisões éticas, técnicas e estratégicas. Continue estudando, praticando e aprimorando sua visão crítica. Segurança é um processo contínuo. 👊</em></p>
     `;
   </script>
 </body>
