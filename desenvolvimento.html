@@ -1,38 +1,107 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Desenvolvimento</title>
-    <link rel="stylesheet" href="estilo.css">
+  <meta charset="UTF-8">
+  <title>Sobre o Desenvolvimento</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f7f9fb;
+      color: #2b2b2b;
+      font-size: 1.2rem;
+      line-height: 1.8;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 40px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #0d47a1;
+      margin-bottom: 25px;
+      border-bottom: 2px solid #0d47a1;
+      padding-bottom: 10px;
+    }
+
+    p {
+      text-align: justify;
+      margin-bottom: 22px;
+    }
+
+    strong {
+      color: #0d47a1;
+    }
+
+    em {
+      font-style: italic;
+      color: #444;
+    }
+
+    .botao {
+      display: inline-block;
+      margin-top: 30px;
+      background-color: #0d47a1;
+      color: #fff;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .botao:hover {
+      background-color: #093270;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        font-size: 1rem;
+      }
+
+      .container {
+        margin: 20px;
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Sobre o Desenvolvimento</h1>
-<p> Este jogo foi desenvolvido como recurso didático-pedagógico para apoiar o ensino de conceitos aplicados à Política de Segurança da Informação (PSI), no contexto da disciplina “Tópicos Especiais em TI: Segurança da Informação e Proteção ao Conhecimento”, do curso de Gestão da Informação da Universidade Federal de Goiás (UFG).
-</p>
+  <div class="container">
+    <h1>Sobre o Desenvolvimento</h1>
 
-<p>
-  A proposta do jogo é proporcionar uma experiência interativa de tomada de decisão diante de um caso real de crise organizacional, a violação de dados da empresa Uber entre 2016 e 2018, simulando situações em que políticas de segurança bem estruturadas poderiam ter evitado ou mitigado os danos causados.
-</p>
+    <p>
+      Este jogo foi desenvolvido como recurso didático-pedagógico para apoiar o ensino de conceitos aplicados à <strong>Política de Segurança da Informação (PSI)</strong>, no contexto da disciplina <em>“Tópicos Especiais em TI: Segurança da Informação e Proteção ao Conhecimento”</em>, do curso de Gestão da Informação da Universidade Federal de Goiás (UFG).
+    </p>
 
-<p>
-  Mais do que testar conhecimentos técnicos, o jogo busca estimular a reflexão crítica sobre o processo de construção e implementação de uma Política de Segurança da Informação (PSI), aproximando os estudantes da realidade prática da governança da informação e da tomada de decisões estratégicas em ambientes organizacionais.
-</p>
+    <p>
+      A proposta do jogo é proporcionar uma experiência interativa de tomada de decisão diante de um caso real de crise organizacional, a violação de dados da empresa Uber entre 2016 e 2018, simulando situações em que políticas de segurança bem estruturadas poderiam ter evitado ou mitigado os danos causados.
+    </p>
 
-<p>
-  Ao longo de cinco rodadas, os jogadores são convidados a analisar aspectos técnicos, legais e éticos envolvidos na gestão da informação, avaliando suas escolhas à luz de normas internacionais como a <em>ISO/IEC 27001</em>, <em>ISO/IEC 27002</em>, e de legislações como a <em>Lei Geral de Proteção de Dados (LGPD)</em> e o <em>Regulamento Geral sobre a Proteção de Dados da União Europeia (GDPR)</em>, com os quais o jogo também foi alinhado conceitualmente.
-</p>
+    <p>
+      Mais do que testar conhecimentos técnicos, o jogo busca estimular a reflexão crítica sobre o processo de construção e implementação de uma <strong>Política de Segurança da Informação (PSI)</strong>, aproximando os estudantes da realidade prática da governança da informação e da tomada de decisões estratégicas em ambientes organizacionais.
+    </p>
 
-<p>
-  Este recurso foi desenvolvido por <strong>Geovana José</strong>, mestranda no Programa de Pós-Graduação em Comunicação da Universidade Federal de Goiás (PPGCOM/UFG), como parte das atividades de estágio docência, sob orientação do professor <strong>Dr. Douglas Farias Cordeiro</strong>.
-</p>
+    <p>
+      Ao longo de cinco rodadas, os jogadores são convidados a analisar aspectos técnicos, legais e éticos envolvidos na gestão da informação, avaliando suas escolhas à luz de normas internacionais como a <em>ISO/IEC 27001</em>, <em>ISO/IEC 27002</em>, e de legislações como a <em>Lei Geral de Proteção de Dados (LGPD)</em> e o <em>Regulamento Geral sobre a Proteção de Dados da União Europeia (GDPR)</em>, com os quais o jogo também foi alinhado conceitualmente.
+    </p>
 
-<p>
-  O jogo integra teoria e prática, promovendo o desenvolvimento de competências relacionadas à cultura organizacional de segurança, à responsabilidade ética no tratamento da informação e à formulação de políticas institucionais robustas e contextualizadas.
-</p>
+    <p>
+      Este recurso foi desenvolvido por <strong>Geovana José</strong>, mestranda no Programa de Pós-Graduação em Comunicação da Universidade Federal de Goiás (PPGCOM/UFG), como parte das atividades de estágio docência, sob orientação do professor <strong>Dr. Douglas Farias Cordeiro</strong>.
+    </p>
 
-        <a href="index.html" class="botao">Voltar ao Início</a>
-    </div>
+    <p>
+      O jogo integra teoria e prática, promovendo o desenvolvimento de competências relacionadas à cultura organizacional de segurança, à responsabilidade ética no tratamento da informação e à formulação de políticas institucionais robustas e contextualizadas.
+    </p>
+
+    <a href="index.html" class="botao">Voltar ao Início</a>
+  </div>
 </body>
 </html>
