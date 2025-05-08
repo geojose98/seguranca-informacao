@@ -43,7 +43,7 @@
     "conformidade": [
       "ISO/IEC 27002 (8.16): controle técnico importante, mas limitado ao nível técnico."
     ],
-    "explicacao": "Essa medida protege contra ataques cibernéticos, mas não combate crises éticas. A denúncia de Fowler foi um problema de cultura e omissão humana — e não de falha técnica."
+    "explicacao": "Essa medida protege contra ataques cibernéticos, mas não combate crises éticas. A denúncia de Fowler foi um problema de cultura e omissão humana, e não de falha técnica."
   },
   "5": {
     "titulo": "Ocultação do vazamento de dados",
