@@ -85,9 +85,14 @@
     escolhas.forEach(id => {
       for (let rodada in gabaritoPorRodada) {
         const resultado = gabaritoPorRodada[rodada][id];
-        if (resultado === true) totalAcertos++;
-        else if (resultado === "parcial") totalParciais++;
-        else if (resultado === false) totalErros++;
+
+        if (resultado === true) {
+          totalAcertos++;
+        } else if (resultado === "parcial") {
+          totalParciais++;
+        } else {
+          totalErros++;
+        }
       }
     });
 
