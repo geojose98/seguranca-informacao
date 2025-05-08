@@ -10,7 +10,7 @@
       "GDPR (art. 33): impõe notificação à autoridade de proteção de dados em até 72h após a detecção do incidente.",
       "ISO/IEC 27035: estabelece diretrizes para planejamento e execução da gestão de incidentes de segurança da informação."
     ],
-    "explicacao": "Negociar com hackers não é apenas antiético — é ilegal. A decisão da Uber de pagar para ocultar o incidente gerou graves consequências legais e destruiu sua credibilidade. Leis e normas exigem transparência e comunicação com autoridades e usuários."
+    "explicacao": "Negociar com hackers não é apenas antiético, é ilegal. A decisão da Uber de pagar para ocultar o incidente gerou graves consequências legais e destruiu sua credibilidade. Leis e normas exigem transparência e comunicação com autoridades e usuários."
   },
   "2": {
     "titulo": "Treinamento em cultura de segurança",
@@ -84,7 +84,7 @@
     "conformidade": [
       "Não aplicável: medida de marketing sem vínculo com a segurança da informação segundo normas ISO, LGPD ou GDPR."
     ],
-    "explicacao": "Melhorar a imagem da marca não resolve falhas internas graves. Segurança da informação não é marketing — é gestão de riscos reais."
+    "explicacao": "Melhorar a imagem da marca não resolve falhas internas graves. Segurança da informação não é marketing, é gestão de riscos reais."
   },
   "8": {
     "titulo": "Acordos de confidencialidade (NDAs)",
