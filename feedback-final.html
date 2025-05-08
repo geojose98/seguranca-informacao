@@ -1,55 +1,141 @@
-<script>
-  const nomeGrupo = localStorage.getItem('nomeGrupo') || 'Grupo Anônimo';
-  document.getElementById('tituloGrupo').innerText = `Parabéns, ${nomeGrupo}!`;
-
-  const gabarito = {
-    Rodada1: {
-      "1": false, "2": true, "3": "parcial", "4": true, "5": false, "6": true, "7": "parcial",
-      "8": true, "9": true, "10": "parcial", "11": "parcial", "12": true, "13": false,
-      "14": "parcial", "15": "parcial"
-    },
-    Rodada2: {
-      "2": true, "8": true, "7": "parcial", "15": "parcial"
-    },
-    Rodada3: {
-      "12": true, "10": "parcial", "11": "parcial", "3": "parcial"
-    },
-    Rodada4: {
-      "9": true, "4": true, "14": "parcial", "7": "parcial"
-    },
-    Rodada5: {
-      "1": true, "13": true, "7": "parcial", "14": "parcial"
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feedback Final</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
-  };
 
-  const rodadas = ['Rodada1', 'Rodada2', 'Rodada3', 'Rodada4', 'Rodada5'];
-  let totalAcertos = 0;
-  let totalParciais = 0;
-  let totalErros = 0;
+    h1 {
+      color: #ffe600;
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
 
-  rodadas.forEach(rodada => {
-    const respostas = JSON.parse(localStorage.getItem(`defesasEscolhidas_${rodada}`) || '[]');
-    respostas.forEach(id => {
-      const acerto = gabarito[rodada]?.[id];
-      if (acerto === true) totalAcertos++;
-      else if (acerto === "parcial") totalParciais++;
-      else totalErros++;
+    h2 {
+      font-size: 1.2em;
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+
+    .resultado-final {
+      background-color: #1e1e1e;
+      padding: 30px;
+      border-radius: 12px;
+      border-left: 6px solid #ffe600;
+      max-width: 800px;
+      text-align: left;
+    }
+
+    .resultado-final p {
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .destaque {
+      color: #ffe600;
+      font-weight: bold;
+    }
+
+    .emoji {
+      font-size: 1.8em;
+      display: inline-block;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+
+    .botao {
+      margin-top: 40px;
+      padding: 14px 32px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #000;
+      background-color: #ffe600;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .botao:hover {
+      background-color: #f2d400;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="tituloGrupo">Parabéns, Grupo!</h1>
+  <h2>Você concluiu a missão de reconstruir a segurança da informação da Uber.</h2>
+
+  <div class="resultado-final" id="resumoFinal">
+    <!-- O conteúdo do resumo será gerado via JavaScript -->
+  </div>
+
+  <button class="botao" onclick="reiniciarJogo()">Jogar novamente</button>
+
+  <script>
+    const nomeGrupo = localStorage.getItem('nomeGrupo') || 'Grupo Anônimo';
+    document.getElementById('tituloGrupo').innerText = `Parabéns, ${nomeGrupo}!`;
+
+    const gabarito = {
+      Rodada1: {
+        "1": false, "2": true, "3": "parcial", "4": true, "5": false, "6": true, "7": "parcial",
+        "8": true, "9": true, "10": "parcial", "11": "parcial", "12": true, "13": false,
+        "14": "parcial", "15": "parcial"
+      },
+      Rodada2: {
+        "2": true, "8": true, "7": "parcial", "15": "parcial"
+      },
+      Rodada3: {
+        "12": true, "10": "parcial", "11": "parcial", "3": "parcial"
+      },
+      Rodada4: {
+        "9": true, "4": true, "14": "parcial", "7": "parcial"
+      },
+      Rodada5: {
+        "1": true, "13": true, "7": "parcial", "14": "parcial"
+      }
+    };
+
+    const rodadas = ['Rodada1', 'Rodada2', 'Rodada3', 'Rodada4', 'Rodada5'];
+    let totalAcertos = 0;
+    let totalParciais = 0;
+    let totalErros = 0;
+
+    rodadas.forEach(rodada => {
+      const respostas = JSON.parse(localStorage.getItem(`defesasEscolhidas_${rodada}`) || '[]');
+      respostas.forEach(id => {
+        const acerto = gabarito[rodada]?.[id];
+        if (acerto === true) totalAcertos++;
+        else if (acerto === "parcial") totalParciais++;
+        else totalErros++;
+      });
     });
-  });
 
-  const resumo = document.getElementById('resumoFinal');
+    const resumo = document.getElementById('resumoFinal');
 
-  resumo.innerHTML = `
-    <p><span class="emoji">✅</span> <span class="destaque">${totalAcertos}</span> escolhas corretas: Sua equipe demonstrou atenção às normas, ética e boas práticas em segurança da informação.</p>
-    <p><span class="emoji">⚠️</span> <span class="destaque">${totalParciais}</span> parcialmente corretas: Algumas decisões mostraram esforço, mas faltou precisão ou contexto adequado.</p>
-    <p><span class="emoji">❌</span> <span class="destaque">${totalErros}</span> escolhas incorretas: Há aprendizados importantes a serem considerados para evitar falhas reais.</p>
-    <hr style="border: 0; border-top: 1px solid #444; margin: 30px 0;">
-    <p><strong>Conclusão:</strong> A jornada de proteção ao conhecimento e à informação é contínua. A LGPD, a GDPR e as normas ISO são ferramentas valiosas — mas só funcionam quando aliadas a uma cultura ética e ao compromisso coletivo.</p>
-    <p>Continue estudando, aplicando e evoluindo. Segurança não é destino, é processo. 👊</p>
-  `;
+    resumo.innerHTML = `
+      <p><span class="emoji">✅</span> <span class="destaque">${totalAcertos}</span> escolhas corretas: Sua equipe demonstrou atenção às normas, ética e boas práticas em segurança da informação.</p>
+      <p><span class="emoji">⚠️</span> <span class="destaque">${totalParciais}</span> parcialmente corretas: Algumas decisões mostraram esforço, mas faltou precisão ou contexto adequado.</p>
+      <p><span class="emoji">❌</span> <span class="destaque">${totalErros}</span> escolhas incorretas: Há aprendizados importantes a serem considerados para evitar falhas reais.</p>
+      <hr style="border: 0; border-top: 1px solid #444; margin: 30px 0;">
+      <p><strong>Conclusão:</strong> A jornada de proteção ao conhecimento e à informação é contínua. A LGPD, a GDPR e as normas ISO são ferramentas valiosas — mas só funcionam quando aliadas a uma cultura ética e ao compromisso coletivo.</p>
+      <p>Continue estudando, aplicando e evoluindo. Segurança não é destino, é processo. 👊</p>
+    `;
 
-  function reiniciarJogo() {
-    localStorage.clear();
-    window.location.href = 'index.html';
-  }
-</script>
+    function reiniciarJogo() {
+      localStorage.clear();
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>
